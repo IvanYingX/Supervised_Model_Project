@@ -1,5 +1,5 @@
 import pandas as pd
-from Data.load_df import load_leagues
+from load_df import load_leagues
 import numpy as np
 
 
