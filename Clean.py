@@ -72,3 +72,4 @@ df_results['Away_Goals'] = df_results['Away_Goals'].map(away_goals_dict).astype(
 df_results['Label'] = ((df_results['Home_Goals'] < df_results['Away_Goals']) * 3 \
                       + (df_results['Home_Goals'] == df_results['Away_Goals']) * 2 \
                       + (df_results['Home_Goals'] > df_results['Away_Goals']) * 1) - 1
+df_results = df_results.drop(['Result', 'Date'], axis=1)
