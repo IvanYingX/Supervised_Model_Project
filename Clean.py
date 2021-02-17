@@ -77,7 +77,8 @@ df_results['Label'] = ((df_results['Home_Goals'] < df_results['Away_Goals']) * 3
                       + (df_results['Home_Goals'] > df_results['Away_Goals']) * 1) - 1
 df_results = df_results.drop(['Result', 'Date'], axis=1)
 
-df_results.to_csv('Data_Cleaned.csv', index=False)
+# Export it as a csv for using in the Feature.py script
+df_results.to_csv('Results_Cleaned.csv', index=False)
 
 ## Cleaning now the Standings dataframe
 df_standings.dropna(inplace=True)
@@ -86,4 +87,7 @@ df_standings.dropna(inplace=True)
 df_standings[['Points', 'Goals_For', 'Goals_Against']] = df_standings[
                         ['Points', 'Goals_For', 'Goals_Against']
                         ].astype('int')
+df_standings = df_standings.rename(columns={'Year': 'Season'})
 
+# Export it as a csv for using in the Feature.py script
+df_standings.to_csv('Standings_Cleaned.csv', index=False)
