@@ -1,5 +1,5 @@
 import pandas as pd
-from Data.load_df import load_leagues
+from load_df import load_leagues
 import numpy as np
 
 
@@ -76,8 +76,7 @@ df_results['Label'] = ((df_results['Home_Goals'] < df_results['Away_Goals']) * 3
                       + (df_results['Home_Goals'] == df_results['Away_Goals']) * 2 \
                       + (df_results['Home_Goals'] > df_results['Away_Goals']) * 1) - 1
 df_results = df_results.drop(['Result', 'Date'], axis=1)
-
-df_results.to_csv('Data_Cleaned.csv', index=False)
+df_results.to_csv('Results_Cleaned.csv', index=False)
 
 ## Cleaning now the Standings dataframe
 df_standings.dropna(inplace=True)
