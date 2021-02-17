@@ -23,6 +23,11 @@ df_standings = load_leagues(sta_dir)
 df_match = pd.read_csv('./Data/Dictionaries/Match_Info.csv')
 df_team = pd.read_csv('./Data/Dictionaries/Team_Info.csv')
 
+# We start by cleaning the results dataframe. We also add some
+# features from the match dataframe
+# TODO: The capacity column has many missing numbers. Once that is scraped
+# finish it
+
 # Clean the pitch column by changing the strings for categories
 pitch_list = ['Natural', 'grass', 'Césped', 'cesped natural', 'Grass',
               'cesped real', 'NATURAL', 'Césped natural', 'natural grass',
@@ -43,12 +48,10 @@ df_team.loc[missing,'Pitch'] = np.random.choice(
 
 df_results = df_results.merge(df_match, on='Link')
 df_results = df_results.drop_duplicates('Link', ignore_index=True)
-df_results = df_results[['Home_Team', 'Away_Team', 'Result', 'Year', 'Round', 'League', 'Date_New']]
+df_results = df_results[['Home_Team', 'Away_Team', 'Result', 'Year', 'Round', 'League', 'Date_New', 'Link']]
 df_results = df_results.rename(columns={'Date_New': 'Date', 'Year': 'Season'})
 df_results['Time'] = df_results['Date'].map(get_hour)
 df_results['Day'] = pd.to_datetime(df_results['Date'].map(lambda x: x.split(',')[1]))
-df_results['Weekend'] = df_results['Day'].dt.dayofweek.map(lambda x: 0 if x < 4 else 1)
-
 # Divide the results in two columns, and also obtain the label
 
 mask = df_results['Result'].map(create_mask)
@@ -73,4 +76,13 @@ df_results['Label'] = ((df_results['Home_Goals'] < df_results['Away_Goals']) * 3
                       + (df_results['Home_Goals'] == df_results['Away_Goals']) * 2 \
                       + (df_results['Home_Goals'] > df_results['Away_Goals']) * 1) - 1
 df_results = df_results.drop(['Result', 'Date'], axis=1)
+df_results.to_csv('Results_Cleaned.csv', index=False)
+
+## Cleaning now the Standings dataframe
+df_standings.dropna(inplace=True)
+
+# Cast the numeric values to int (instead of str)
+df_standings[['Points', 'Goals_For', 'Goals_Against']] = df_standings[
+                        ['Points', 'Goals_For', 'Goals_Against']
+                        ].astype('int')
 
