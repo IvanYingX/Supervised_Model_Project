@@ -18,11 +18,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold
 from sklearn.linear_model import SGDClassifier
 
+# Load the data
+
+df = pd.read_csv('Data_Transformed.csv')
 classifiers = [
     KNeighborsClassifier(3),
     SVC(probability=True),
     DecisionTreeClassifier(),
-    RandomForestClassifier(n_estimators = 100),
+    RandomForestClassifier(n_estimators=100),
     AdaBoostClassifier(),
     GradientBoostingClassifier(),
     GaussianNB(),

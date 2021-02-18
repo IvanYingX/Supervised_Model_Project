@@ -176,6 +176,40 @@ def generate_streaks(df_res):
     return df_res
 
 
+def norm_and_select(df):
+    '''
+    '''
+    list_init_position = ['Position_Home', 'Position_Away']
+    list_init_goals = ['Goals_For_Home', 'Goals_For_Away',
+                       'Goals_Against_Home', 'Goals_Against_Away']
+
+    list_final_position = ['Position_Home_Norm', 'Position_Away_Norm']
+    list_final_goals = ['Goals_For_Home_Norm', 'Goals_Against_Home_Norm',
+                        'Goals_For_Away_Norm', 'Goals_Against_Aways_Norm']
+
+    list_init = ['Label'] + (list_init_position + list_init_goals
+                             + ['Number_Teams', 'Number_Rounds',
+                                'Round', 'Home_Streak', 'Away_Streak',
+                                'Home_Streak_Total', 'Away_Streak_Total',
+                                'Weekend', 'Daytime'])
+    list_final = ['Label'] + (list_final_position + list_final_goals
+                              + ['Round_Norm', 'Home_Streak',
+                                 'Away_Streak', 'Home_Streak_Total',
+                                 'Away_Streak_Total', 'Weekend', 'Daytime'])
+
+    df_init = df[list_init]
+    df_init = df_init[df_init['Round'] != 1]
+    df_init[list_final_position] = df_init[list_init_position].divide(
+                                            df_init['Number_Teams'], axis=0)
+    df_init[list_final_goals] = df_init[list_init_goals].divide(
+                                            df_init['Round'], axis=0)
+    df_init['Round_Norm'] = df_init['Round'].divide(
+                                            df['Number_Rounds'], axis=0)
+
+    df_final = df_init[list_final]
+    return df_final
+
+
 # Load the cleaned data
 
 df_results = pd.read_csv('Results_Cleaned.csv')
@@ -208,3 +242,14 @@ for column in column_list:
     df_results[[column + '_Home', column + '_Away']] = df_results[
                             [column + '_Home', column + '_Away']
                             ].astype('int64')
+
+# Save the dataset in case we need these data later
+df_results.to_csv('Data_Transformed.csv', index=False)
+
+# We can normalize for each season, so the round value and the number
+# of goals depend on the number of teams and current round in that season
+# Additionally, we can select the features in the same function
+df_selected = norm_and_select(df_results)
+
+# Save the dataset as a csv
+df_selected.to_csv('Data_For_Model.csv', index=False)
