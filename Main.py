@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_predict
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
@@ -16,11 +18,44 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.linear_model import SGDClassifier
+from sklearn.base import clone
+
 
 # Load the data
+df = pd.read_csv('Data_For_Model.csv')
+X = df.iloc[:, 1::].values
+y = df.iloc[:, 0].values
+# Split the data into train and test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3,
+                                                    random_state=42)
+X_test, X_validation, y_test, y_validation = train_test_split(X_test, y_test,
+                                                              test_size=0.5,
+                                                              random_state=42)
 
-df = pd.read_csv('Data_Transformed.csv')
+sgd_classifier = SGDClassifier(random_state=42)
+sgd_classifier.fit(X_train, y_train)
+y_pred = sgd_classifier.predict(X_test)
+n_correct = sum(y_pred == y_test)
+print(n_correct / len(y_pred))
+# sgd_classifier = SGDClassifier(random_state=42)
+
+# skfolds = StratifiedKFold(n_splits=10)
+# for train_index, test_index in skfolds.split(X, y):
+#     clone_classifier = clone(sgd_classifier)
+#     X_train = X[train_index]
+#     y_train = y[train_index]
+#     X_test = X[test_index]
+#     y_test = y[test_index]
+#     # Use the cloned classifier to see the score in each strata
+#     clone_classifier.fit(X_train, y_train)
+#     y_pred = clone_classifier.predict(X_test)
+#     n_correct = sum(y_pred == y_test)
+#     print(n_correct / len(y_pred))
+
+print(cross_val_score(sgd_classifier, X_train, y_train, cv = 10, scoring = 'accuracy'))
 classifiers = [
     KNeighborsClassifier(3),
     SVC(probability=True),
