@@ -56,12 +56,12 @@ classifiers = [
 #                                                               test_size=0.5,
 #                                                               random_state=42)
 
-# sgd_classifier = SGDClassifier(random_state=42)
-# sgd_classifier.fit(X_train, y_train)
-# y_pred = sgd_classifier.predict(X_test)
-# n_correct = sum(y_pred == y_test)
-# print(n_correct / len(y_pred))
-# sgd_classifier = SGDClassifier(random_state=42)
+sgd_classifier = SGDClassifier(random_state=42)
+sgd_classifier.fit(X, y)
+y_pred = sgd_classifier.predict(X_validation)
+n_correct = sum(y_pred == y_validation)
+print(n_correct / len(y_pred))
+sgd_classifier = SGDClassifier(random_state=42)
 
 # skfolds = StratifiedKFold(n_splits=10)
 # for train_index, test_index in skfolds.split(X, y):
@@ -79,62 +79,63 @@ classifiers = [
 # print(cross_val_score(sgd_classifier, X_train, y_train,
 #       cv = 10, scoring = 'accuracy'))
 
-cols = ['Classifier', 'Accuracy', 'Precision', 'Recall', 'F1Score']
-df_metrics = pd.DataFrame(columns=cols)
-acc_dict = {}
-prec_dict = {}
-recall_dict = {}
-f1_dict = {}
+# cols = ['Classifier', 'Accuracy', 'Precision', 'Recall', 'F1Score']
+# df_metrics = pd.DataFrame(columns=cols)
+# acc_dict = {}
+# prec_dict = {}
+# recall_dict = {}
+# f1_dict = {}
 
 # Fit each model with k splits. Thus, we split the data
 # into (n_splits) buckets, and use (n_splits - 1) buckets to
 # train, and 1 bucket to validate the model. Previously we already
 # split the data into training and validation
-for clf in classifiers:
-    for train_index, test_index in skfolds.split(X, y):
-        X_train, X_test = X[train_index], X[test_index]
-        y_train, y_test = y[train_index], y[test_index]
+# for clf in classifiers:
+#     for train_index, test_index in skfolds.split(X, y):
+#         X_train, X_test = X[train_index], X[test_index]
+#         y_train, y_test = y[train_index], y[test_index]
 
-        name = clf.__class__.__name__
-        clf.fit(X_train, y_train)
-        y_pred = clf.predict(X_test)
-        accu = accuracy_score(y_test, y_pred)
-        prec = precision_score(y_test, y_pred, average='weighted')
-        recall = recall_score(y_test, y_pred, average='weighted')
-        f1 = f1_score(y_test, y_pred, average='weighted')
+#         name = clf.__class__.__name__
+#         clf.fit(X_train, y_train)
+#         y_pred = clf.predict(X_test)
+#         accu = accuracy_score(y_test, y_pred)
+#         prec = precision_score(y_test, y_pred, average='weighted')
+#         recall = recall_score(y_test, y_pred, average='weighted')
+#         f1 = f1_score(y_test, y_pred, average='weighted')
 
-        if name in acc_dict:
-            acc_dict[name].append(accu)
-            prec_dict[name].append(prec)
-            recall_dict[name].append(recall)
-            f1_dict[name].append(f1)
-        else:
-            acc_dict[name] = [accu]
-            prec_dict[name] = [prec]
-            recall_dict[name] = [recall]
-            f1_dict[name] = [f1]
+#         if name in acc_dict:
+#             acc_dict[name].append(accu)
+#             prec_dict[name].append(prec)
+#             recall_dict[name].append(recall)
+#             f1_dict[name].append(f1)
+#         else:
+#             acc_dict[name] = [accu]
+#             prec_dict[name] = [prec]
+#             recall_dict[name] = [recall]
+#             f1_dict[name] = [f1]
 
-for classifier in acc_dict:
-    acc_dict[classifier] = np.mean(acc_dict[classifier])
-    prec_dict[classifier] = np.mean(prec_dict[classifier])
-    recall_dict[classifier] = np.mean(recall_dict[classifier])
-    f1_dict[classifier] = np.mean(f1_dict[classifier])
-    new_entry = pd.DataFrame([[classifier, acc_dict[classifier],
-                               prec_dict[classifier],
-                               recall_dict[classifier],
-                               f1_dict[classifier]]],
-                             columns=cols)
-    df_metrics = df_metrics.append(new_entry, ignore_index=True)
+# for classifier in acc_dict:
+#     acc_dict[classifier] = np.mean(acc_dict[classifier])
+#     prec_dict[classifier] = np.mean(prec_dict[classifier])
+#     recall_dict[classifier] = np.mean(recall_dict[classifier])
+#     f1_dict[classifier] = np.mean(f1_dict[classifier])
+#     new_entry = pd.DataFrame([[classifier, acc_dict[classifier],
+#                                prec_dict[classifier],
+#                                recall_dict[classifier],
+#                                f1_dict[classifier]]],
+#                              columns=cols)
+#     df_metrics = df_metrics.append(new_entry, ignore_index=True)
 
-barWidth = 0.2
-r1 = np.arange(len(df_metrics.Classifier))
-r2 = [x + barWidth for x in r1]
-r3 = [x + barWidth for x in r2]
-r4 = [x + barWidth for x in r3]
+# barWidth = 0.2
+# r1 = np.arange(len(df_metrics.Classifier))
+# r2 = [x + barWidth for x in r1]
+# r3 = [x + barWidth for x in r2]
+# r4 = [x + barWidth for x in r3]
 
-fig, ax = plt.subplots(figsize=(15, 10))
-plt.bar(r1, df_metrics.Accuracy, width=0.2)
-plt.bar(r2, df_metrics.Precision, width=0.2)
-plt.bar(r3, df_metrics.Recall, width=0.2)
-plt.bar(r4, df_metrics.F1Score, width=0.2)
-plt.grid()
+# fig, ax = plt.subplots(figsize=(15, 10))
+# plt.bar(r1, df_metrics.Accuracy, width=0.2)
+# plt.bar(r2, df_metrics.Precision, width=0.2)
+# plt.bar(r3, df_metrics.Recall, width=0.2)
+# plt.bar(r4, df_metrics.F1Score, width=0.2)
+# plt.grid()
+df = pd.read_csv('Data_For_Model.csv')
