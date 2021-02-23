@@ -187,15 +187,20 @@ def norm_and_select(df):
     list_final_goals = ['Goals_For_Home_Norm', 'Goals_Against_Home_Norm',
                         'Goals_For_Away_Norm', 'Goals_Against_Aways_Norm']
 
+    # list_init = ['Label'] + (list_init_position + list_init_goals
+    #                          + ['Number_Teams', 'Number_Rounds',
+    #                             'Round', 'Home_Streak', 'Away_Streak',
+    #                             'Home_Streak_Total', 'Away_Streak_Total',
+    #                             'Weekend', 'Daytime'])
+    # list_final = ['Label'] + (list_final_position + list_final_goals
+    #                           + ['Round_Norm', 'Home_Streak',
+    #                              'Away_Streak', 'Home_Streak_Total',
+    #                              'Away_Streak_Total', 'Weekend', 'Daytime'])
     list_init = ['Label'] + (list_init_position + list_init_goals
                              + ['Number_Teams', 'Number_Rounds',
-                                'Round', 'Home_Streak', 'Away_Streak',
-                                'Home_Streak_Total', 'Away_Streak_Total',
-                                'Weekend', 'Daytime'])
+                                'Round', 'Weekend', 'Daytime'])
     list_final = ['Label'] + (list_final_position + list_final_goals
-                              + ['Round_Norm', 'Home_Streak',
-                                 'Away_Streak', 'Home_Streak_Total',
-                                 'Away_Streak_Total', 'Weekend', 'Daytime'])
+                              + ['Round_Norm', 'Weekend', 'Daytime'])
 
     df_init = df[list_init]
     df_init = df_init[df_init['Round'] != 1]
@@ -245,7 +250,7 @@ for column in column_list:
 
 # Save the dataset in case we need these data later
 df_results.to_csv('Data_Transformed.csv', index=False)
-df_results = generate_streaks(df_results)
+# df_results = generate_streaks(df_results)
 # We can normalize for each season, so the round value and the number
 # of goals depend on the number of teams and current round in that season
 # Additionally, we can select the features in the same function
