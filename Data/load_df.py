@@ -1,5 +1,8 @@
 import pandas as pd
+import numpy as np
 import glob
+from bs4 import BeautifulSoup
+from urllib.request import urlopen, Request
 pd.options.mode.chained_assignment = None
 
 
