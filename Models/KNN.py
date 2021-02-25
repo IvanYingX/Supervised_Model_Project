@@ -11,7 +11,7 @@ import os
 def train_KNN(X, y, save_model=True):
 
     model = KNeighborsClassifier()
-    search_grid = {'n_neighbors': [3, 5, 7, 9, 11]}
+    search_grid = {'n_neighbors': [70, 75, 80, 85, 90]}
     clf = Classifier(model, search_grid)
     clf.train(X, y)
     if save_model:

@@ -8,6 +8,7 @@ from Models import AdaBoost, Decision_Tree
 from Models import GradientBoost, KNN, Linear_Discriminant
 from Models import Logistic_reg, Naive_Bayes, SVC
 from Models import Random_Forest, SGD, Quadratic_Discriminant
+from joblib import load
 from os.path import dirname, basename, isfile, join
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import cross_val_score
@@ -19,6 +20,35 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import plot_confusion_matrix
+import tkinter as tk
+import pandas as pd
+from pandastable import Table, TableModel
+
+
+class DataFrameTable(tk.Frame):
+    def __init__(self, parent=None, df=pd.DataFrame()):
+        super().__init__()
+        self.parent = parent
+        self.pack(fill=tk.BOTH, expand=True)
+        self.table = Table(
+            self, dataframe=df,
+            showtoolbar=False,
+            showstatusbar=True,
+            editable=False)
+        self.table.show()
+
+
+def _quit():
+    root.quit()
+    root.destroy()
+
+
+def _stop():
+    """Stop scanning by setting the global flag to False."""
+    global running
+    root.quit()
+    root.destroy()
+    running = False
 
 
 fun_dict = {
@@ -37,93 +67,63 @@ fun_dict = {
         Quadratic_Discriminant.train_Quadratic_Discriminant
 }
 
-# Load the classification models
-action = train_predict.train_or_predict()
-if action:
-    df = pd.read_csv('Data_For_Model.csv')
-    X = df.iloc[:, 1::].values
-    y = df.iloc[:, 0].values
-    # Split the data into train and validation. The training set will be
-    # used later in k-cross validation, so it remains as X, and y
-    X_train, X_validation, y_train, y_validation = \
-        train_test_split(X, y, test_size=0.3,
-                         random_state=42)
-    classifiers = train_predict.train()
-    clf_dict = {}
-    for clf in classifiers:
-        clf_dict[clf] = fun_dict[clf](X_train, y_train)
 
-# rf_clf = train_Random_Forest(X_train, y_train)
-# print(rf_clf.accuracy(X_validation, y_validation))
-# sgd_classifier = SGDClassifier(random_state=42)
-# sgd_classifier.fit(X, y)
-# y_pred = sgd_classifier.predict(X_validation)
-# n_correct = sum(y_pred == y_validation)
-# print(n_correct / len(y_pred))
-# sgd_classifier = SGDClassifier(random_state=42)
+df = pd.read_csv('Data_For_Model.csv')
+X = df.iloc[:, 1::].values
+y = df.iloc[:, 0].values
+# Split the data into train and validation. The training set will be
+# used later in k-cross validation, so it remains as X, and y
+X_train, X_validation, y_train, y_validation = \
+    train_test_split(X, y, test_size=0.3,
+                     random_state=42)
 
-# skfolds = StratifiedKFold(n_splits=10)
-# for train_index, test_index in skfolds.split(X, y):
-#     clone_classifier = clone(sgd_classifier)
-#     X_train = X[train_index]
-#     y_train = y[train_index]
-#     X_test = X[test_index]
-#     y_test = y[test_index]
-#     # Use the cloned classifier to see the score in each strata
-#     clone_classifier.fit(X_train, y_train)
-#     y_pred = clone_classifier.predict(X_test)
-#     n_correct = sum(y_pred == y_test)
-#     print(n_correct / len(y_pred))
+running = True
 
-# print(cross_val_score(sgd_classifier, X_train, y_train,
-#       cv = 10, scoring = 'accuracy'))
+while running:
 
-# cols = ['Classifier', 'Accuracy', 'Precision', 'Recall', 'F1Score']
-# df_metrics = pd.DataFrame(columns=cols)
-# acc_dict = {}
-# prec_dict = {}
-# recall_dict = {}
-# f1_dict = {}
+    action = train_predict.train_predict_check()
 
-# Fit each model with k splits. Thus, we split the data
-# into (n_splits) buckets, and use (n_splits - 1) buckets to
-# train, and 1 bucket to validate the model. Previously we already
-# split the data into training and validation
-# for clf in classifiers:
-#     for train_index, test_index in skfolds.split(X, y):
-#         X_train, X_test = X[train_index], X[test_index]
-#         y_train, y_test = y[train_index], y[test_index]
+    if action == 1:
+        # Load the classification models
+        classifiers = train_predict.train()
+        clf_dict = {}
+        for clf in classifiers:
+            clf_dict[clf] = fun_dict[clf](X_train, y_train)
 
-#         name = clf.__class__.__name__
-#         clf.fit(X_train, y_train)
-#         y_pred = clf.predict(X_test)
-#         accu = accuracy_score(y_test, y_pred)
-#         prec = precision_score(y_test, y_pred, average='weighted')
-#         recall = recall_score(y_test, y_pred, average='weighted')
-#         f1 = f1_score(y_test, y_pred, average='weighted')
+        cols = ['Classifier', 'Accuracy', 'Precision', 'Recall', 'F1Score']
+        df_metrics = pd.DataFrame(columns=cols)
+        clfs = list(fun_dict.keys())
 
-#         if name in acc_dict:
-#             acc_dict[name].append(accu)
-#             prec_dict[name].append(prec)
-#             recall_dict[name].append(recall)
-#             f1_dict[name].append(f1)
-#         else:
-#             acc_dict[name] = [accu]
-#             prec_dict[name] = [prec]
-#             recall_dict[name] = [recall]
-#             f1_dict[name] = [f1]
+        for clf in clfs:
 
-# for classifier in acc_dict:
-#     acc_dict[classifier] = np.mean(acc_dict[classifier])
-#     prec_dict[classifier] = np.mean(prec_dict[classifier])
-#     recall_dict[classifier] = np.mean(recall_dict[classifier])
-#     f1_dict[classifier] = np.mean(f1_dict[classifier])
-#     new_entry = pd.DataFrame([[classifier, acc_dict[classifier],
-#                                prec_dict[classifier],
-#                                recall_dict[classifier],
-#                                f1_dict[classifier]]],
-#                              columns=cols)
-#     df_metrics = df_metrics.append(new_entry, ignore_index=True)
+            model = load(f'Models/{clf}_model.joblib')
+            y_pred = model.predict(X_validation)
+            accu = accuracy_score(y_validation, y_pred)
+            prec = precision_score(y_validation, y_pred, average='weighted')
+            recall = recall_score(y_validation, y_pred, average='weighted')
+            f1 = f1_score(y_validation, y_pred, average='weighted')
+            new_entry = pd.DataFrame([[clf, accu, prec, recall, f1]],
+                                     columns=cols)
+            df_metrics = df_metrics.append(new_entry, ignore_index=True)
+
+        df_metrics.to_csv('Models/Metrics.csv', index=False)
+
+    elif action == 2:
+        train_predict.predict()
+        # Get information for the next round
+        # Ask what league the user wants to predict from:
+
+    elif action == 3:
+
+        df_metrics = pd.read_csv('Models/Metrics.csv')
+        root = tk.Tk()
+        table = DataFrameTable(root, df_metrics)
+        button_back = tk.Button(root, text='Go Back', command=_quit)
+        button_back.pack(side=tk.BOTTOM)
+        button = tk.Button(master=root, text="Quit", command=_stop)
+        button.pack(side=tk.BOTTOM)
+        root.mainloop()
+
 
 # barWidth = 0.2
 # r1 = np.arange(len(df_metrics.Classifier))
