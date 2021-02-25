@@ -1,4 +1,5 @@
 import pandas as pd
+from collections import defaultdict
 
 
 def get_daytime(x):
@@ -54,8 +55,8 @@ def generate_keys(df_res, df_sta):
     # The Round + 1 is to take into account that the standings dataframe is
     # constructed at the end of each round
     df_sta['Key'] = df_sta.apply(
-                            lambda x: f"{x['Team']}-{x['Round'] + 1}"
-                            + "-{x['Season']}-{x['League']}",
+                            lambda x: f"{x['Team']}-{x['Round']}"
+                            + f"-{x['Season']}-{x['League']}",
                             axis=1)
     df_sta['Key_Season_League'] = df_sta.apply(
                             lambda x: f"{x['Season']}-{x['League']}",
@@ -102,14 +103,22 @@ def generate_keys(df_res, df_sta):
 def generate_streaks(df_res):
     '''
     '''
-    dict_label = {0: 1, 1: 0, 2: -1}
+    def def_value():
+        return 0
+
+    dict_label = defaultdict(def_value)
+    dict_label[0] = 1
+    dict_label[2] = -1
     df_res['Win_Home'] = df_res['Label'].map(dict_label)
     df_res['Win_Away'] = df_res['Label'].map(dict_label) * (-1)
     df_res['Home_Streak_Total'] = None
     df_res['Away_Streak_Total'] = None
     df_res['Home_Streak'] = None
     df_res['Away_Streak'] = None
+    n = 0
     for team in set(df_res['Home_Team']):
+        print(f"{n} teams out of {len(set(df_res['Home_Team']))}")
+        n += 1
         df_res_home = df_res[(df_res['Home_Team'] == team)]
         df_res_away = df_res[(df_res['Away_Team'] == team)]
         df_res_team = df_res[(df_res['Home_Team'] == team)
@@ -138,19 +147,19 @@ def generate_streaks(df_res):
                     .multiply(subset["Win_Away"])
                     )
                 streak_value = (
-                    streak
-                    + 0.5 * streak.shift(1, fill_value=0)
-                    + 0.2 * streak.shift(2, fill_value=0)
+                    streak.shift(1, fill_value=0)
+                    + 0.5 * streak.shift(2, fill_value=0)
+                    + 0.2 * streak.shift(3, fill_value=0)
                     )
                 streak_home_value = (
-                    home_subset
-                    + 0.5 * home_subset.shift(1, fill_value=0)
-                    + 0.2 * home_subset.shift(2, fill_value=0)
+                    home_subset.shift(1, fill_value=0)
+                    + 0.5 * home_subset.shift(2, fill_value=0)
+                    + 0.2 * home_subset.shift(3, fill_value=0)
                     )
                 streak_away_value = (
-                    away_subset
-                    + 0.5 * away_subset.shift(1, fill_value=0)
-                    + 0.2 * away_subset.shift(2, fill_value=0)
+                    away_subset.shift(1, fill_value=0)
+                    + 0.5 * away_subset.shift(2, fill_value=0)
+                    + 0.2 * away_subset.shift(3, fill_value=0)
                     )
 
                 home_streak_total = pd.Series(
@@ -245,7 +254,7 @@ for column in column_list:
 
 # Save the dataset in case we need these data later
 df_results.to_csv('Data_Transformed.csv', index=False)
-
+df_results = generate_streaks(df_results)
 # We can normalize for each season, so the round value and the number
 # of goals depend on the number of teams and current round in that season
 # Additionally, we can select the features in the same function
