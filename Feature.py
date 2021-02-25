@@ -33,7 +33,7 @@ def get_daytime(x):
         return 0
 
 
-def generate_keys(df_res, df_sta):
+def generate_keys(df_res, df_sta, predict):
     '''
     Returns the dataframes with added common keys, so they can be
     merged together to extract more features
@@ -55,7 +55,7 @@ def generate_keys(df_res, df_sta):
     # The Round + 1 is to take into account that the standings dataframe is
     # constructed at the end of each round
     df_sta['Key'] = df_sta.apply(
-                            lambda x: f"{x['Team']}-{x['Round']}"
+                            lambda x: f"{x['Team']}-{x['Round'] + 1}"
                             + f"-{x['Season']}-{x['League']}",
                             axis=1)
     df_sta['Key_Season_League'] = df_sta.apply(
@@ -85,10 +85,11 @@ def generate_keys(df_res, df_sta):
     # disorganised. Thus, some seasons in the site only included 1 round. We
     # can get rid of those seasons checking if the number of matches is equal
     # to the number of teams times 2 minus 2.
-    mask = matches.values == (2*(teams-1)).values
-    accepted_keys = matches[mask].index
-    df_res = df_res[df_res['Key_Season_League'].isin(accepted_keys)]
-    df_sta = df_sta[df_sta['Key_Season_League'].isin(accepted_keys)]
+    if not predict:
+        mask = matches.values == (2*(teams-1)).values
+        accepted_keys = matches[mask].index
+        df_res = df_res[df_res['Key_Season_League'].isin(accepted_keys)]
+        df_sta = df_sta[df_sta['Key_Season_League'].isin(accepted_keys)]
 
     # We can add a new variable that contains the number of matches in a
     # certain season and league
@@ -111,10 +112,10 @@ def generate_streaks(df_res):
     dict_label[2] = -1
     df_res['Win_Home'] = df_res['Label'].map(dict_label)
     df_res['Win_Away'] = df_res['Label'].map(dict_label) * (-1)
-    df_res['Home_Streak_Total'] = None
-    df_res['Away_Streak_Total'] = None
-    df_res['Home_Streak'] = None
-    df_res['Away_Streak'] = None
+    df_res['Home_Streak_Total'] = 0
+    df_res['Away_Streak_Total'] = 0
+    df_res['Home_Streak'] = 0
+    df_res['Away_Streak'] = 0
     n = 0
     for team in set(df_res['Home_Team']):
         print(f"{n} teams out of {len(set(df_res['Home_Team']))}")
@@ -220,45 +221,59 @@ def norm_and_select(df):
 
 
 # Load the cleaned data
+def create_features(df_results, df_standings, predict=True):
+    # Check where to store the output
+    if predict:
+        output_file_transform = 'Data_to_Predict_Transform.csv'
+        output_file_predict = 'Data_to_Predict.csv'
+    else:
+        output_file_transform = 'Data_Transformed.csv'
+        output_file_predict = 'Data_For_Model.csv'
 
-df_results = pd.read_csv('Results_Cleaned.csv')
-df_standings = pd.read_csv('Standings_Cleaned.csv')
+#    Create a new feature to see if the weekday was a weekend or not
+    df_results['Weekend'] = pd.to_datetime(
+                        df_results['Day']
+                        ).dt.dayofweek.map(
+                        lambda x: 0 if x < 4 else 1)
 
-# Create a new feature to see if the weekday was a weekend or not
-df_results['Weekend'] = pd.to_datetime(
-                    df_results['Day']
-                    ).dt.dayofweek.map(
-                    lambda x: 0 if x < 4 else 1)
+    # Create a new feature to see if the match took place during the
+    # morning, afternoon, or evening.
+    df_results['Daytime'] = df_results['Time'].map(get_daytime)
 
-# Create a new feature to see if the match took place during the
-# morning, afternoon, or evening.
-df_results['Daytime'] = df_results['Time'].map(get_daytime)
+    # Generate the keys to merge centain values to the results dataframe
+    df_results, df_standings = generate_keys(df_results, df_standings,
+                                             predict=predict)
+    column_list = ['Position', 'Goals_For', 'Goals_Against']
+    dict_key = df_standings[['Key'] + column_list].set_index('Key').to_dict()
 
-# Generate the keys to merge centain values to the results dataframe
-df_results, df_standings = generate_keys(df_results, df_standings)
-column_list = ['Position', 'Goals_For', 'Goals_Against']
-dict_key = df_standings[['Key'] + column_list].set_index('Key').to_dict()
+    # Merge the Position, Goals for, and Goals againts from
+    # the standings to the Results dataframe
+    for column in column_list:
+        df_results[column + '_Home'] = \
+            df_results['Key_Home'].map(dict_key[column])
+        df_results[column + '_Away'] = \
+            df_results['Key_Away'].map(dict_key[column])
+        df_results.dropna(
+            subset=[column + '_Home',
+                    column + '_Away'],
+            inplace=True)
+        df_results[[column + '_Home', column + '_Away']] = df_results[
+                                [column + '_Home', column + '_Away']
+                                ].astype('int64')
 
-# Merge the Position, Goals for, and Goals againts from the standings to the
-# Results dataframe
-for column in column_list:
-    df_results[column + '_Home'] = df_results['Key_Home'].map(dict_key[column])
-    df_results[column + '_Away'] = df_results['Key_Away'].map(dict_key[column])
-    df_results.dropna(
-        subset=[column + '_Home',
-                column + '_Away'],
-        inplace=True)
-    df_results[[column + '_Home', column + '_Away']] = df_results[
-                            [column + '_Home', column + '_Away']
-                            ].astype('int64')
+    # Save the dataset in case we need these data later
+    df_results.to_csv(output_file_transform, index=False)
+    df_results = generate_streaks(df_results)
+    # We can normalize for each season, so the round value and the number
+    # of goals depend on the number of teams and current round in that season
+    # Additionally, we can select the features in the same function
+    df_selected = norm_and_select(df_results)
 
-# Save the dataset in case we need these data later
-df_results.to_csv('Data_Transformed.csv', index=False)
-df_results = generate_streaks(df_results)
-# We can normalize for each season, so the round value and the number
-# of goals depend on the number of teams and current round in that season
-# Additionally, we can select the features in the same function
-df_selected = norm_and_select(df_results)
+    # Save the dataset as a csv
+    df_selected.to_csv(output_file_predict, index=False)
 
-# Save the dataset as a csv
-df_selected.to_csv('Data_For_Model.csv', index=False)
+
+if __name__ == '__main__':
+    df_results = pd.read_csv('Results_Cleaned.csv')
+    df_standings = pd.read_csv('Standings_Cleaned.csv')
+    create_features(df_results, df_standings, predict=False)

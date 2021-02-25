@@ -16,8 +16,22 @@ from Data import load_df
 import Clean
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from pandastable import Table, TableModel
 
 button_ttc = None
+
+
+class DataFrameTable(tk.Frame):
+    def __init__(self, parent=None, df=pd.DataFrame()):
+        super().__init__()
+        self.parent = parent
+        self.pack(fill=tk.BOTH, expand=True)
+        self.table = Table(
+            self, dataframe=df,
+            showtoolbar=False,
+            showstatusbar=True,
+            editable=False)
+        self.table.show()
 
 
 def accept_cookies(year, league, round=None):
@@ -491,20 +505,30 @@ def get_last_round_season(df, league):
         if df_predict.shape[0] == 0:
             return 2, None, None
         else:
-            df_predict['Date'] = pd.to_datetime(
+            df_predict['Day'] = pd.to_datetime(
                         df_predict['Link'].map(get_date))
             return 3, last_round + 1, df_predict
 
     else:
-        df_predict['Date'] = pd.to_datetime(df_predict['Link'].map(get_date))
+        df_predict['Day'] = pd.to_datetime(df_predict['Link'].map(get_date))
         return 4, last_round, df_predict
 
 
-def predict():
-
+def get_next_matches():
+    '''
+    Return the upcoming matches that hasn't been played
+    These matches are the immediate next to the current ones
+    Returns
+    -------
+    league_round_list: list
+        List of pandas Dataframes
+    df_to_show: pandas Dataframe
+        Dataframe with the name of each match in each league
+    '''
     leagues = get_leagues()
     df = load_df.load_leagues('Data/Results')
     league_round_list = []
+    matches = {}
     for league in leagues:
         print(f'Getting information about {league}')
         msg, last_round, df_predict = \
@@ -530,7 +554,19 @@ def predict():
                   + f' in league {league} \n')
             league_round_list.append(df_predict)
 
-    print(league_round_list)
+    for league in league_round_list:
+        matches[league['League'][0]] = []
+        for index, row in league.iterrows():
+            matches[row['League']].append(f'{row["Home_Team"]} vs.'
+                                          + f'{row["Away_Team"]}')
+
+    df_to_show = pd.DataFrame.from_dict(matches)
+    root = tk.Tk()
+    table = DataFrameTable(root, df_to_show)
+    button = tk.Button(master=root, text="Confirm", command=root.destroy)
+    button.pack(side=tk.BOTTOM)
+    root.mainloop()
+    return league_round_list, df_to_show
     # root = Tk()
 
     # def on_closing():
@@ -543,3 +579,61 @@ def predict():
 
     # root.mainloop()
     # print(root.filename)
+
+
+def choose_model():
+    modules = glob.glob(join(dirname(__file__), "../Models/*.py"))
+    classifiers = ([basename(f)[:-3] for f in modules
+                    if isfile(f) and not
+                    (f.endswith("__init__.py") or f.endswith("classifier.py"))
+                    ])
+    box_var = []
+    boxes = []
+    box_num = 0
+    root = tk.Tk()
+
+    def on_closing():
+        if messagebox.askokcancel("Quit", "Do you want to quit?"):
+            root.destroy()
+            sys.exit('Quitting...')
+
+    root.protocol("WM_DELETE_WINDOW", on_closing)
+    root.geometry("450x300+120+120")
+    tk.Label(
+        root, text="Select the classifiers use for the prediction",
+        justify=tk.LEFT, font=("Arial", 14), padx=5, pady=10
+        ).grid(row=0, column=0, columnspan=2)
+    r = 0
+    for clf in classifiers[:int(len(classifiers)/2) + 1]:
+        box_var.append(tk.IntVar())
+        boxes.append(
+            tk.Checkbutton(
+                root, text=clf,
+                variable=box_var[box_num]
+                )
+            )
+        box_var[box_num].set(0)
+        boxes[box_num].grid(row=r + 1, column=0)
+        box_num += 1
+        r += 1
+    confirm_row = r + 1
+    r = 0
+    for clf in classifiers[int(len(classifiers)/2) + 1:]:
+        box_var.append(tk.IntVar())
+        boxes.append(
+            tk.Checkbutton(
+                root, text=clf,
+                variable=box_var[box_num]
+                )
+            )
+        box_var[box_num].set(0)
+        boxes[box_num].grid(row=r + 1, column=1)
+        box_num += 1
+        r += 1
+
+    tk.Button(root, text="Confirm", width=10, relief=tk.RAISED,
+              command=root.destroy, justify=tk.CENTER
+              ).grid(row=confirm_row, column=0, pady=10, columnspan=2)
+    root.mainloop()
+    mask = [val.get() for val in box_var]
+    return list(itertools.compress(classifiers, mask))

@@ -2,6 +2,7 @@ import glob
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from Feature import *
 from GUI_models import train_predict
 from Models import *
 from Models import AdaBoost, Decision_Tree
@@ -83,6 +84,7 @@ while running:
 
     action = train_predict.train_predict_check()
 
+    # If action is 1, that means train has been pressed
     if action == 1:
         # Load the classification models
         classifiers = train_predict.train()
@@ -108,11 +110,42 @@ while running:
 
         df_metrics.to_csv('Models/Metrics.csv', index=False)
 
+    # If action is 2, that means predict has been pressed
     elif action == 2:
-        train_predict.predict()
         # Get information for the next round
         # Ask what league the user wants to predict from:
+        next_match_list, df_to_show = train_predict.get_next_matches()
 
+        # Ask what model the user wants to use for prediction:
+        clf = train_predict.choose_model()[0]
+        clf = load(f'Models/{clf}_model.joblib')
+        leagues = []
+        last_season = []
+        for match in next_match_list:
+            # Take only the leagues and years of the desired predictions
+            leagues.append(match['League'].unique()[0])
+            last_season.append(match['Season'].unique()[0])
+        season_league = zip(last_season, leagues)
+        df_sta_whole = pd.read_csv('Standings_Cleaned.csv')
+        df_sta_list = []
+
+        for season, league in season_league:
+            df_sta_list.append(
+                df_sta_whole[
+                    (df_sta_whole['Season'] == season)
+                    & (df_sta_whole['League'] == league)])
+        df_sta = pd.concat(df_sta_list)
+
+        # Let's concat the match list in a single Dataframe
+        df_pred = pd.concat(next_match_list)
+        df_pred[['Home_Goals', 'Away_Goals', 'Label']] = None
+        create_features(df_pred, df_sta, predict=True)
+        df_to_predict = pd.read_csv('Data_to_Predict.csv')
+        predictions = clf.predict(df_to_predict)
+        
+
+
+    # If action is 3, that means check has been pressed
     elif action == 3:
 
         df_metrics = pd.read_csv('Models/Metrics.csv')
@@ -123,17 +156,3 @@ while running:
         button = tk.Button(master=root, text="Quit", command=_stop)
         button.pack(side=tk.BOTTOM)
         root.mainloop()
-
-
-# barWidth = 0.2
-# r1 = np.arange(len(df_metrics.Classifier))
-# r2 = [x + barWidth for x in r1]
-# r3 = [x + barWidth for x in r2]
-# r4 = [x + barWidth for x in r3]
-
-# fig, ax = plt.subplots(figsize=(15, 10))
-# plt.bar(r1, df_metrics.Accuracy, width=0.2)
-# plt.bar(r2, df_metrics.Precision, width=0.2)
-# plt.bar(r3, df_metrics.Recall, width=0.2)
-# plt.bar(r4, df_metrics.F1Score, width=0.2)
-# plt.grid()
