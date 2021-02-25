@@ -114,7 +114,7 @@ while running:
     elif action == 2:
         # Get information for the next round
         # Ask what league the user wants to predict from:
-        next_match_list, df_to_show = train_predict.get_next_matches()
+        next_match_list = train_predict.get_next_matches()
 
         # Ask what model the user wants to use for prediction:
         clf = train_predict.choose_model()[0]
@@ -141,9 +141,21 @@ while running:
         df_pred[['Home_Goals', 'Away_Goals', 'Label']] = None
         create_features(df_pred, df_sta, predict=True)
         df_to_predict = pd.read_csv('Data_to_Predict.csv')
-        predictions = clf.predict(df_to_predict)
-        
+        X_predict = df_to_predict.iloc[:, 1::].values
+        y_predict = df_to_predict.iloc[:, 0].values
+        predictions = clf.predict(X_predict)
 
+        matches = []
+        for index, row in df_pred.iterrows():
+            matches.append(f'{row["Home_Team"]} vs.'
+                           + f'{row["Away_Team"]}')
+        df_to_show = pd.DataFrame({'Match': matches,
+                                   'Predictions': predictions})
+        root = tk.Tk()
+        table = DataFrameTable(root, df_to_show)
+        button = tk.Button(master=root, text="Quit", command=_quit)
+        button.pack(side=tk.BOTTOM)
+        root.mainloop()
 
     # If action is 3, that means check has been pressed
     elif action == 3:

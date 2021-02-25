@@ -118,7 +118,6 @@ def generate_streaks(df_res):
     df_res['Away_Streak'] = 0
     n = 0
     for team in set(df_res['Home_Team']):
-        print(f"{n} teams out of {len(set(df_res['Home_Team']))}")
         n += 1
         df_res_home = df_res[(df_res['Home_Team'] == team)]
         df_res_away = df_res[(df_res['Away_Team'] == team)]

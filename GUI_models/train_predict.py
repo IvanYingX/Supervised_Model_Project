@@ -566,7 +566,7 @@ def get_next_matches():
     button = tk.Button(master=root, text="Confirm", command=root.destroy)
     button.pack(side=tk.BOTTOM)
     root.mainloop()
-    return league_round_list, df_to_show
+    return league_round_list
     # root = Tk()
 
     # def on_closing():
