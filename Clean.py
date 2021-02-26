@@ -4,6 +4,18 @@ import numpy as np
 
 
 def get_hour(x):
+    '''
+    Takes the second part of the date column, which corresponds to the hour
+    If not available, it returns a standard hour, 17:00
+    Parameters
+    ----------
+    x: str
+        The result of the match
+    Returns
+    -------
+    str:
+        The hour of the match, if not available, returns 17:00
+    '''
     if len(x.split(',')) > 2:
         return x.split(',')[2]
     else:
@@ -11,6 +23,20 @@ def get_hour(x):
 
 
 def create_mask(x):
+    '''
+    Create a mask that divided cleans the result column
+    Only those values whose length is one or five characters long
+    can't be used
+    
+    Parameters
+    ----------
+    x: str
+        The result of the match
+    Returns
+    -------
+    bool
+        False if the length is 1 or 5. True otherwise
+    '''
     if (len(x) == 1) | (len(x) == 5):
         return False
     else:
@@ -18,10 +44,29 @@ def create_mask(x):
 
 
 def clean_data(res_dir, sta_dir):
+    '''
+    Loads the datasets of all the available leagues, concatenates them,
+    en cleans the data
+    
+    Parameters
+    ----------
+    res_dir: str
+        Directory with the CSVs of the results
+    sta_dir: str
+        Directory with the CSVs of the standings
+    Returns
+    -------
+    df_results: pandas DataFrame
+        Dataframe with the result data of all the leagues
+        concatenated and cleaned
+    df_standings: pandas DataFrame
+        Dataframe with the standing data of all the leagues
+        concatenated and cleaned
+    '''
     df_results = load_leagues(res_dir)
     df_standings = load_leagues(sta_dir)
-    df_match = pd.read_csv('./Data/Dictionaries/Match_Info.csv')
-    df_team = pd.read_csv('./Data/Dictionaries/Team_Info.csv')
+    df_match = pd.read_csv('./Data/Match_Info.csv')
+    df_team = pd.read_csv('./Data/Team_Info.csv')
 
     # We start by cleaning the results dataframe. We also add some
     # features from the match dataframe

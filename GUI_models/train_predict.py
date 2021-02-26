@@ -9,14 +9,12 @@ import tkinter as tk
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from tkinter import *
-from tkinter import filedialog
 from tkinter import messagebox
 from os.path import dirname, basename, isfile, join
 from Data import load_df
-import Clean
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from pandastable import Table, TableModel
+from pandastable import Table
 
 button_ttc = None
 
