@@ -103,6 +103,22 @@ def generate_keys(df_res, df_sta, predict):
 
 def generate_streaks(df_res):
     '''
+    Returns the dataframes with added columns representing the streaks
+    of the home team and the away team
+    Home_Streak is the streak of the home team when it played at home
+    Away_Streak is the streak of the away team when it played away
+    Home_Streak_Total is the total streak of the home team, regardless
+            where it played
+    Away_Streak_Total is the total streak of the away team, regardless
+            where it played
+    Parameters
+    ----------
+    df_res : pandas Dataframe
+        Dataframe with the results and info of the matches
+    Returns
+    -------
+    df_res : pandas Dataframe
+        Updated Dataframe with the explained streaks
     '''
     def def_value():
         return 0
@@ -187,6 +203,20 @@ def generate_streaks(df_res):
 
 def norm_and_select(df):
     '''
+    Normalize the following features:
+        Position Home Team
+        Position Away Team
+        Goals For
+        Goals Away
+    And select the features to be used in the prediction
+    Parameters
+    ----------
+    df : pandas Dataframe
+        Dataframe with the info of the matches without normalizing
+    Returns
+    -------
+    df_final : pandas Dataframe
+        Updated Dataframe with normalized and selected features
     '''
     list_init_position = ['Position_Home', 'Position_Away']
     list_init_goals = ['Goals_For_Home', 'Goals_For_Away',
@@ -221,6 +251,31 @@ def norm_and_select(df):
 
 # Load the cleaned data
 def create_features(df_results, df_standings, predict=True):
+    '''
+    Takes the clean dataset and creates features by applying
+    feature engineering
+    These new features include:
+        Weekend: Whether the match took place during the weekend
+        Daytime: Whether the match took place in the morning, during the
+                 afternoon or during the evening
+        Position_Home and Position_Away: Position of the respective team in the
+                corresponding round
+        Goals_For_Home and Goals_For_Away: Cumulated sum of the goals for
+                of the respective team in the corresponding round
+        Goals_Against_Home and Goals_Against_Away: Cumulated sum of the goals
+                against of the respective team in the corresponding round
+    Parameters
+    ----------
+    df_results : pandas Dataframe
+        Dataframe with the info of the matches
+    df_standings : pandas Dataframe
+        Dataframe with the info of the standings
+    predict: bool
+        If True, the code creates small dataframes with the upcoming matches so
+        they are used for prediction
+        if False, the code creates datasets with all the provided data
+        with the added features, so it can be used for training
+    '''
     # Check where to store the output
     if predict:
         output_file_transform = 'Data_to_Predict_Transform.csv'

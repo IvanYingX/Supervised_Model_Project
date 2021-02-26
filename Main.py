@@ -1,7 +1,5 @@
 import os
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 from Feature import *
 from GUI_models import train_predict
 from Models import *
@@ -10,20 +8,14 @@ from Models import GradientBoost, KNN, Linear_Discriminant
 from Models import Logistic_reg, Naive_Bayes, SVC
 from Models import Random_Forest, SGD, Quadratic_Discriminant
 from joblib import load
-from os.path import dirname, basename, isfile, join
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import cross_val_predict
 from sklearn.model_selection import train_test_split
-from sklearn.base import clone
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import plot_confusion_matrix
 import tkinter as tk
 import pandas as pd
-from pandastable import Table, TableModel
+from pandastable import Table
 
 
 class DataFrameTable(tk.Frame):
@@ -160,7 +152,7 @@ while running:
         button = tk.Button(master=root, text="Quit", command=_quit)
         button.pack(side=tk.BOTTOM)
         root.mainloop()
-        
+
         # Delete the created files after their use
         os.remove("Data_to_Predict_Transform.csv")
         os.remove("Data_to_Predict.csv")
