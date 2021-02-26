@@ -1,4 +1,4 @@
-import glob
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -80,8 +80,12 @@ X_train, X_validation, y_train, y_validation = \
 
 running = True
 
+# The while loop ensures that one can go back to the main menu
 while running:
 
+    # If action is 1, that means train has been pressed
+    # If action is 2, that means predict has been pressed
+    # If action is 3, that means check has been pressed
     action = train_predict.train_predict_check()
 
     # If action is 1, that means train has been pressed
@@ -156,6 +160,10 @@ while running:
         button = tk.Button(master=root, text="Quit", command=_quit)
         button.pack(side=tk.BOTTOM)
         root.mainloop()
+        
+        # Delete the created files after their use
+        os.remove("Data_to_Predict_Transform.csv")
+        os.remove("Data_to_Predict.csv")
 
     # If action is 3, that means check has been pressed
     elif action == 3:
