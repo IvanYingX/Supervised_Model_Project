@@ -1,0 +1,207 @@
+Home_Team,Away_Team,Result,Link,Season,Round,League,Number_Teams,Total_Rounds,Label,Goals_For_Home,Goals_For_Away,Position_Home,Points_Home,Total_Wins_Home,Total_Draw_Home,Total_Lose_Home,Total_Goals_For_Home_Team,Total_Goals_Against_Home_Team,Total_Streak_Home,Wins_When_Home,Draw_When_Home,Lose_When_Home,Goals_For_When_Home,Goals_Against_When_Home,Position_Away,Points_Away,Total_Wins_Away,Total_Draw_Away,Total_Lose_Away,Total_Goals_For_Away_Team,Total_Goals_Against_Away_Team,Total_Streak_Away,Wins_When_Away,Draw_When_Away,Lose_When_Away,Goals_For_When_Away,Goals_Against_When_Away,Streak_When_Home,Streak_When_Away
+Hamburger SV,Fortuna,2-1,/match/hamburger-sv/fortuna-dusseldorf/2021,2021,1,2_liga,18,23,0,2,1,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Jahn Regensburg,Nürnberg,1-1,/match/ssv-jahn-regensburg/fc-nurnberg/2021,2021,1,2_liga,18,23,1,1,1,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Hannover 96,Karlsruher SC,2-0,/match/hannover-96/karlsruher-sc/2021,2021,1,2_liga,18,23,0,2,0,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Sandhausen,Darmstadt 98,3-2,/match/sv-sandhausen/darmstadt-98/2021,2021,1,2_liga,18,23,0,3,2,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Würzburger,Erzgebirge Aue,0-3,/match/wurzburger-kickers/fc-erzgebirge-aue/2021,2021,1,2_liga,18,23,2,0,3,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Heidenheim,Braunschweig,2-0,/match/heidenheim/eintracht-brau-hellip/2021,2021,1,2_liga,18,23,0,2,0,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Greuther Fürth,VfL Osnabrück,1-1,/match/greuther-furth/vfl-osnabruck/2021,2021,1,2_liga,18,23,1,1,1,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Holstein Kiel,Paderborn,1-0,/match/holstein-kiel/paderborn/2021,2021,1,2_liga,18,23,0,1,0,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+VfL Bochum,FC St. Pauli,2-2,/match/bochum/st-pauli/2021,2021,1,2_liga,18,23,1,2,2,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,,
+Erzgebirge Aue,Greuther Fürth,1-1,/match/fc-erzgebirge-aue/greuther-furth/2021,2021,2,2_liga,18,23,1,1,1,3,3,1,0,0,3,0,W,0,0,0,0,0,12,1,0,1,0,1,1,D,0,0,0,0,0,,
+VfL Osnabrück,Hannover 96,2-1,/match/vfl-osnabruck/hannover-96/2021,2021,2,2_liga,18,23,0,2,1,11,1,0,1,0,1,1,D,0,0,0,0,0,6,3,1,0,0,2,0,W,0,0,0,0,0,,
+Braunschweig,Holstein Kiel,0-0,/match/eintracht-brau-hellip/holstein-kiel/2021,2021,2,2_liga,18,23,1,0,0,17,0,0,0,1,0,2,L,0,0,0,0,0,1,3,1,0,0,1,0,W,0,0,0,0,0,,
+Darmstadt 98,Jahn Regensburg,0-0,/match/darmstadt-98/ssv-jahn-regensburg/2021,2021,2,2_liga,18,23,1,0,0,16,0,0,0,1,2,3,L,0,0,0,0,0,8,1,0,1,0,1,1,D,0,0,0,0,0,,
+Fortuna,Würzburger,1-0,/match/fortuna-dusseldorf/wurzburger-kickers/2021,2021,2,2_liga,18,23,0,1,0,18,0,0,0,1,1,2,L,0,0,0,0,0,13,0,0,0,1,0,3,L,0,0,0,0,0,,
+Karlsruher SC,VfL Bochum,0-1,/match/karlsruher-sc/bochum/2021,2021,2,2_liga,18,23,2,0,1,14,0,0,0,1,0,2,L,0,0,0,0,0,7,1,0,1,0,2,2,D,0,0,0,0,0,,
+Nürnberg,Sandhausen,1-0,/match/fc-nurnberg/sv-sandhausen/2021,2021,2,2_liga,18,23,0,1,0,9,1,0,1,0,1,1,D,0,0,0,0,0,5,3,1,0,0,3,2,W,0,0,0,0,0,,
+FC St. Pauli,Heidenheim,4-2,/match/st-pauli/heidenheim/2021,2021,2,2_liga,18,23,0,4,2,10,1,0,1,0,2,2,D,0,0,0,0,0,2,3,1,0,0,2,0,W,0,0,0,0,0,,
+Paderborn,Hamburger SV,3-4,/match/paderborn/hamburger-sv/2021,2021,2,2_liga,18,23,2,3,4,15,0,0,0,1,0,1,L,0,0,0,0,0,4,3,1,0,0,2,1,W,0,0,0,0,0,,
+VfL Bochum,VfL Osnabrück,0-0,/match/bochum/vfl-osnabruck/2021,2021,3,2_liga,18,23,1,0,0,3,4,1,1,0,3,2,DW,0,1,0,2,2,4,4,1,1,0,3,2,DW,0,1,0,1,1,D,D
+Sandhausen,FC St. Pauli,1-0,/match/sv-sandhausen/st-pauli/2021,2021,3,2_liga,18,23,0,1,0,9,3,1,0,1,3,3,WL,1,0,0,3,2,6,4,1,1,0,6,4,DW,0,1,0,2,2,W,D
+Hannover 96,Braunschweig,4-1,/match/hannover-96/eintracht-brau-hellip/2021,2021,3,2_liga,18,23,0,4,1,8,3,1,0,1,3,2,WL,1,0,0,2,0,15,1,0,1,1,0,2,LD,0,0,1,0,2,W,L
+Heidenheim,Paderborn,0-0,/match/heidenheim/paderborn/2021,2021,3,2_liga,18,23,1,0,0,10,3,1,0,1,4,4,WL,1,0,0,2,0,18,0,0,0,2,3,5,LL,0,0,1,0,1,W,L
+Jahn Regensburg,Karlsruher SC,1-0,/match/ssv-jahn-regensburg/karlsruher-sc/2021,2021,3,2_liga,18,23,0,1,0,12,2,0,2,0,1,1,DD,0,1,0,1,1,17,0,0,0,2,0,3,LL,0,0,1,0,2,D,L
+Holstein Kiel,Fortuna,2-1,/match/holstein-kiel/fortuna-dusseldorf/2021,2021,3,2_liga,18,23,0,2,1,2,4,1,1,0,1,0,WD,1,0,0,1,0,11,3,1,0,1,2,2,LW,0,0,1,1,2,W,L
+Würzburger,Greuther Fürth,2-2,/match/wurzburger-kickers/greuther-furth/2021,2021,3,2_liga,18,23,1,2,2,16,0,0,0,2,0,4,LL,0,0,1,0,3,13,2,0,2,0,2,2,DD,0,1,0,1,1,L,D
+Nürnberg,Darmstadt 98,2-3,/match/fc-nurnberg/darmstadt-98/2021,2021,3,2_liga,18,23,2,2,3,5,4,1,1,0,2,1,DW,1,0,0,1,0,14,1,0,1,1,2,3,LD,0,0,1,2,3,W,L
+Hamburger SV,Erzgebirge Aue,3-0,/match/hamburger-sv/fc-erzgebirge-aue/2021,2021,3,2_liga,18,23,0,3,0,1,6,2,0,0,6,4,WW,1,0,0,2,1,7,4,1,1,0,4,1,WD,1,0,0,3,0,W,W
+Braunschweig,VfL Bochum,2-1,/match/eintracht-brau-hellip/bochum/2021,2021,4,2_liga,18,23,0,2,1,15,1,0,1,2,1,6,LDL,0,1,0,0,0,5,5,1,2,0,3,2,DWD,1,0,0,1,0,D,W
+Greuther Fürth,Hamburger SV,0-1,/match/greuther-furth/hamburger-sv/2021,2021,4,2_liga,18,23,2,0,1,14,3,0,3,0,4,4,DDD,0,1,0,1,1,1,9,3,0,0,9,4,WWW,1,0,0,4,3,D,W
+Karlsruher SC,Sandhausen,3-0,/match/karlsruher-sc/sv-sandhausen/2021,2021,4,2_liga,18,23,0,3,0,18,0,0,0,3,0,4,LLL,0,0,1,0,1,3,6,2,0,1,4,3,WLW,0,0,1,0,1,L,L
+Erzgebirge Aue,Heidenheim,2-1,/match/fc-erzgebirge-aue/heidenheim/2021,2021,4,2_liga,18,23,0,2,1,10,4,1,1,1,4,4,WDL,0,1,0,1,1,9,4,1,1,1,4,4,WLD,0,0,1,2,4,D,L
+Fortuna,Jahn Regensburg,2-2,/match/fortuna-dusseldorf/ssv-jahn-regensburg/2021,2021,4,2_liga,18,23,1,2,2,13,3,1,0,2,3,4,LWL,1,0,0,1,0,7,5,1,2,0,2,1,DDW,0,1,0,0,0,W,D
+Paderborn,Hannover 96,1-0,/match/paderborn/hannover-96/2021,2021,4,2_liga,18,23,0,1,0,17,1,0,1,2,3,5,LLD,0,0,1,3,4,4,6,2,0,1,7,3,WLW,0,0,1,1,2,L,L
+Würzburger,Holstein Kiel,0-2,/match/wurzburger-kickers/holstein-kiel/2021,2021,4,2_liga,18,23,2,0,2,16,1,0,1,2,2,6,LLD,0,1,1,2,5,2,7,2,1,0,3,1,WDW,0,1,0,0,0,LD,D
+FC St. Pauli,Nürnberg,2-2,/match/st-pauli/fc-nurnberg/2021,2021,4,2_liga,18,23,1,2,2,11,4,1,1,1,6,5,DWL,1,0,0,4,2,12,4,1,1,1,4,4,DWL,0,1,0,1,1,W,D
+VfL Osnabrück,Darmstadt 98,1-1,/match/vfl-osnabruck/darmstadt-98/2021,2021,4,2_liga,18,23,1,1,1,6,5,1,2,0,3,2,DWD,1,0,0,2,1,8,4,1,1,1,5,5,LDW,1,0,1,5,5,W,LW
+Nürnberg,Karlsruher SC,1-1,/match/fc-nurnberg/karlsruher-sc/2021,2021,5,2_liga,18,23,1,1,1,11,5,1,2,1,6,6,DWLD,1,0,1,3,3,17,3,1,0,3,3,4,LLLW,0,0,2,0,3,WL,LL
+Jahn Regensburg,Braunschweig,3-0,/match/ssv-jahn-regensburg/eintracht-brau-hellip/2021,2021,5,2_liga,18,23,0,3,0,6,6,1,3,0,4,3,DDWD,1,1,0,2,1,14,4,1,1,2,3,7,LDLW,0,0,2,1,6,DW,LL
+Darmstadt 98,FC St. Pauli,2-2,/match/darmstadt-98/st-pauli/2021,2021,5,2_liga,18,23,1,2,2,9,5,1,2,1,6,6,LDWD,0,1,0,0,0,10,5,1,2,1,8,7,DWLD,0,1,1,2,3,D,DL
+Hamburger SV,Würzburger,3-1,/match/hamburger-sv/wurzburger-kickers/2021,2021,5,2_liga,18,23,0,3,1,1,12,4,0,0,10,4,WWWW,2,0,0,5,1,18,1,0,1,3,2,8,LLDL,0,0,1,0,1,WW,L
+Hannover 96,Fortuna,3-0,/match/hannover-96/fortuna-dusseldorf/2021,2021,5,2_liga,18,23,0,3,0,4,6,2,0,2,7,4,WLWL,2,0,0,6,1,13,4,1,1,2,5,6,LWLD,0,0,2,2,4,WW,LL
+Holstein Kiel,Greuther Fürth,1-3,/match/holstein-kiel/greuther-furth/2021,2021,5,2_liga,18,23,2,1,3,2,10,3,1,0,5,1,WDWW,2,0,0,3,1,16,3,0,3,1,4,5,DDDL,0,2,0,3,3,WW,DD
+VfL Bochum,Erzgebirge Aue,2-0,/match/bochum/fc-erzgebirge-aue/2021,2021,5,2_liga,18,23,0,2,0,8,5,1,2,1,4,4,DWDL,0,2,0,2,2,3,7,2,1,1,6,5,WDLW,1,0,1,3,3,DD,WL
+Heidenheim,VfL Osnabrück,1-1,/match/heidenheim/vfl-osnabruck/2021,2021,5,2_liga,18,23,1,1,1,12,4,1,1,2,5,6,WLDL,1,1,0,2,0,5,6,1,3,0,4,3,DWDD,0,2,0,1,1,WD,DD
+Sandhausen,Paderborn,1-1,/match/sv-sandhausen/paderborn/2021,2021,5,2_liga,18,23,1,1,1,7,6,2,0,2,4,6,WLWL,2,0,0,4,2,15,4,1,1,2,4,5,LLDW,0,1,1,0,1,WW,LD
+Fortuna,Heidenheim,1-0,/match/fortuna-dusseldorf/heidenheim/2021,2021,6,2_liga,18,23,0,1,0,15,4,1,1,3,5,9,LWLDL,1,1,0,3,2,13,5,1,2,2,6,7,WLDLD,0,0,2,3,6,WD,LL
+Hamburger SV,FC St. Pauli,2-2,/match/hamburger-sv/st-pauli/2021,2021,6,2_liga,18,23,1,2,2,1,15,5,0,0,13,5,WWWWW,3,0,0,8,2,11,6,1,3,1,10,9,DWLDD,0,2,1,4,5,WWW,DLD
+Erzgebirge Aue,Holstein Kiel,1-1,/match/fc-erzgebirge-aue/holstein-kiel/2021,2021,6,2_liga,18,23,1,1,1,6,7,2,1,2,6,7,WDLWL,1,1,0,3,2,2,10,3,1,1,6,4,WDWWL,1,1,0,2,0,DW,DW
+Braunschweig,Nürnberg,3-2,/match/eintracht-brau-hellip/fc-nurnberg/2021,2021,6,2_liga,18,23,0,3,2,16,4,1,1,3,3,10,LDLWL,1,1,0,2,1,9,6,1,3,1,7,7,DWLDD,0,2,0,3,3,DW,DD
+Paderborn,Jahn Regensburg,3-1,/match/paderborn/ssv-jahn-regensburg/2021,2021,6,2_liga,18,23,0,3,1,14,5,1,2,2,5,6,LLDWD,1,0,1,4,4,4,9,2,3,0,7,3,DDWDW,0,2,0,2,2,LW,DD
+VfL Osnabrück,Sandhausen,2-1,/match/vfl-osnabruck/sv-sandhausen/2021,2021,6,2_liga,18,23,0,2,1,7,7,1,4,0,5,4,DWDDD,1,1,0,3,2,8,7,2,1,2,5,7,WLWLD,0,0,2,0,4,WD,LL
+Greuther Fürth,Hannover 96,4-1,/match/greuther-furth/hannover-96/2021,2021,6,2_liga,18,23,0,4,1,10,6,1,3,1,7,6,DDDLW,0,1,1,1,2,3,9,3,0,2,10,4,WLWLW,0,0,2,1,3,DL,LL
+Karlsruher SC,Darmstadt 98,3-4,/match/karlsruher-sc/darmstadt-98/2021,2021,6,2_liga,18,23,2,3,4,17,4,1,1,3,4,5,LLLWD,1,0,1,3,1,12,6,1,3,1,8,8,LDWDD,1,1,1,6,6,LW,LWD
+Würzburger,VfL Bochum,2-3,/match/wurzburger-kickers/bochum/2021,2021,6,2_liga,18,23,2,2,3,18,1,0,1,4,3,11,LLDLL,0,1,2,2,7,5,8,2,2,1,6,4,DWDLW,1,0,1,2,2,LDL,WL
+Heidenheim,Würzburger,4-1,/match/heidenheim/wurzburger-kickers/2021,2021,7,2_liga,18,23,0,4,1,16,5,1,2,3,6,8,WLDLDL,1,2,0,3,1,18,1,0,1,5,5,14,LLDLLL,0,0,2,1,4,WDD,LL
+Sandhausen,Braunschweig,2-2,/match/sv-sandhausen/eintracht-brau-hellip/2021,2021,7,2_liga,18,23,1,2,2,11,7,2,1,3,6,9,WLWLDL,2,1,0,5,3,14,7,2,1,3,6,12,LDLWLW,0,0,3,1,9,WWD,LLL
+VfL Bochum,Greuther Fürth,0-2,/match/bochum/greuther-furth/2021,2021,7,2_liga,18,23,2,0,2,3,11,3,2,1,9,6,DWDLWW,1,2,0,4,2,6,9,2,3,1,11,7,DDDLWW,1,2,0,6,4,DDW,DDW
+Hannover 96,Erzgebirge Aue,0-0,/match/hannover-96/fc-erzgebirge-aue/2021,2021,7,2_liga,18,23,1,0,0,8,9,3,0,3,11,8,WLWLWL,3,0,0,9,1,9,8,2,2,2,7,8,WDLWLD,1,0,2,3,5,WWW,WLL
+Nürnberg,Fortuna,1-1,/match/fc-nurnberg/fortuna-dusseldorf/2021,2021,7,2_liga,18,23,1,1,1,15,6,1,3,2,9,10,DWLDDL,1,1,1,4,4,13,7,2,1,3,6,9,LWLDLW,0,0,3,2,7,WLD,LLL
+Darmstadt 98,Paderborn,0-4,/match/darmstadt-98/paderborn/2021,2021,7,2_liga,18,23,2,0,4,5,9,2,3,1,12,11,LDWDDW,0,2,0,2,2,10,8,2,2,2,8,7,LLDWDW,0,2,1,1,2,DD,LDD
+Jahn Regensburg,VfL Osnabrück,2-4,/match/ssv-jahn-regensburg/vfl-osnabruck/2021,2021,7,2_liga,18,23,2,2,4,7,9,2,3,1,8,6,DDWDWL,2,1,0,5,1,4,10,2,4,0,7,5,DWDDDW,0,3,0,2,2,DWW,DDD
+FC St. Pauli,Karlsruher SC,0-3,/match/st-pauli/karlsruher-sc/2021,2021,7,2_liga,18,23,2,0,3,12,7,1,4,1,12,11,DWLDDD,1,1,0,6,4,17,4,1,1,4,7,9,LLLWDL,0,1,2,1,4,WD,LLD
+Holstein Kiel,Hamburger SV,1-1,/match/holstein-kiel/hamburger-sv/2021,2021,7,2_liga,18,23,1,1,1,2,11,3,2,1,7,5,WDWWLD,2,0,1,4,4,1,16,5,1,0,15,7,WWWWWD,2,0,0,5,3,WWL,WW
+Braunschweig,Karlsruher SC,1-3,/match/eintracht-brau-hellip/karlsruher-sc/2021,2021,8,2_liga,18,23,2,1,3,13,8,2,2,3,8,14,LDLWLWD,2,1,0,5,3,17,7,2,1,4,10,9,LLLWDLW,1,1,2,4,4,DWW,LLDW
+Fortuna,Sandhausen,1-0,/match/fortuna-dusseldorf/sv-sandhausen/2021,2021,8,2_liga,18,23,0,1,0,12,8,2,2,3,7,10,LWLDLWD,2,1,0,4,2,11,8,2,2,3,8,11,WLWLDLD,0,0,3,1,6,WDW,LLL
+Holstein Kiel,Heidenheim,2-2,/match/holstein-kiel/heidenheim/2021,2021,8,2_liga,18,23,1,2,2,4,12,3,3,1,8,6,WDWWLDD,2,1,1,5,5,14,8,2,2,3,10,9,WLDLDLW,0,0,3,3,7,WWLD,LLL
+Paderborn,FC St. Pauli,2-0,/match/paderborn/st-pauli/2021,2021,8,2_liga,18,23,0,2,0,5,11,3,2,2,12,7,LLDWDWW,2,0,1,7,5,15,7,1,4,2,12,14,DWLDDDL,0,3,1,6,7,LWW,DLDD
+Erzgebirge Aue,Darmstadt 98,3-0,/match/fc-erzgebirge-aue/darmstadt-98/2021,2021,8,2_liga,18,23,0,3,0,10,9,2,3,2,7,8,WDLWLDD,1,2,0,4,3,8,9,2,3,2,12,15,LDWDDWL,2,1,1,10,9,DWD,LWDW
+Greuther Fürth,Jahn Regensburg,3-1,/match/greuther-furth/ssv-jahn-regensburg/2021,2021,8,2_liga,18,23,0,3,1,3,12,3,3,1,13,7,DDDLWWW,1,1,1,5,3,9,9,2,3,2,10,10,DDWDWLL,0,2,1,3,5,DLW,DDL
+Hamburger SV,VfL Bochum,1-3,/match/hamburger-sv/bochum/2021,2021,8,2_liga,18,23,2,1,3,1,17,5,2,0,16,8,WWWWWDD,3,1,0,10,4,6,11,3,2,2,9,8,DWDLWWL,2,0,1,5,4,WWWD,WLW
+Würzburger,Hannover 96,2-1,/match/wurzburger-kickers/hannover-96/2021,2021,8,2_liga,18,23,0,2,1,18,1,0,1,6,6,18,LLDLLLL,0,1,3,4,10,7,10,3,1,3,11,8,WLWLWLD,0,0,3,2,7,LDLL,LLL
+VfL Osnabrück,Nürnberg,1-4,/match/vfl-osnabruck/fc-nurnberg/2021,2021,8,2_liga,18,23,2,1,4,2,13,3,4,0,11,7,DWDDDWW,2,1,0,5,3,16,7,1,4,2,10,11,DWLDDLD,0,2,1,5,6,WDW,DDL
+Darmstadt 98,Braunschweig,4-0,/match/darmstadt-98/eintracht-brau-hellip/2021,2021,9,2_liga,18,23,0,4,0,12,9,2,3,3,12,18,LDWDDWLL,0,2,1,2,6,16,8,2,2,4,9,17,LDLWLWDL,0,1,3,3,11,DDL,LLLD
+FC St. Pauli,VfL Osnabrück,0-1,/match/st-pauli/vfl-osnabruck/2021,2021,9,2_liga,18,23,2,0,1,17,7,1,4,3,12,16,DWLDDDLL,1,1,1,6,7,5,13,3,4,1,12,11,DWDDDWWL,1,3,0,6,4,WDL,DDDW
+Karlsruher SC,Paderborn,1-0,/match/karlsruher-sc/paderborn/2021,2021,9,2_liga,18,23,0,1,0,11,10,3,1,4,13,10,LLLWDLWW,1,0,2,6,5,3,14,4,2,2,14,7,LLDWDWWW,1,2,1,5,2,LWL,LDDW
+Jahn Regensburg,Würzburger,2-1,/match/ssv-jahn-regensburg/wurzburger-kickers/2021,2021,9,2_liga,18,23,0,2,1,13,9,2,3,3,11,13,DDWDWLLL,2,1,1,7,5,18,4,1,1,6,8,19,LLDLLLLW,0,0,3,2,8,DWWL,LLL
+Sandhausen,Erzgebirge Aue,1-4,/match/sv-sandhausen/fc-erzgebirge-aue/2021,2021,9,2_liga,18,23,2,1,4,15,8,2,2,4,8,12,WLWLDLDL,2,2,0,7,5,7,12,3,3,2,10,8,WDLWLDDW,1,1,2,3,5,WWDD,WLLD
+Hannover 96,Holstein Kiel,0-3,/match/hannover-96/holstein-kiel/2021,2021,9,2_liga,18,23,2,0,3,9,10,3,1,4,12,10,WLWLWLDL,3,1,0,9,1,6,13,3,4,1,10,8,WDWWLDDD,1,2,0,3,1,WWWD,DWD
+Heidenheim,Hamburger SV,3-2,/match/heidenheim/hamburger-sv/2021,2021,9,2_liga,18,23,0,3,2,14,9,2,3,3,12,11,WLDLDLWD,2,2,0,7,2,1,17,5,2,1,17,11,WWWWWDDL,2,1,0,6,4,WDDW,WWD
+Nürnberg,Greuther Fürth,2-3,/match/fc-nurnberg/greuther-furth/2021,2021,9,2_liga,18,23,2,2,3,10,10,2,4,2,14,12,DWLDDLDW,1,2,1,5,5,2,15,4,3,1,16,8,DDDLWWWW,2,2,0,8,4,WLDD,DDWW
+VfL Bochum,Fortuna,5-0,/match/bochum/fortuna-dusseldorf/2021,2021,9,2_liga,18,23,0,5,0,4,14,4,2,2,12,9,DWDLWWLW,1,2,1,4,4,8,11,3,2,3,8,10,LWLDLWDW,0,1,3,3,8,DDWL,LLLD
+Fortuna,Darmstadt 98,3-2,/match/fortuna-dusseldorf/darmstadt-98/2021,2021,10,2_liga,18,23,0,3,2,12,11,3,2,4,8,15,LWLDLWDWL,3,1,0,5,2,11,12,3,3,3,16,18,LDWDDWLLW,2,1,2,10,12,WDWW,LWDWL
+Holstein Kiel,VfL Bochum,3-1,/match/holstein-kiel/bochum/2021,2021,10,2_liga,18,23,0,3,1,5,16,4,4,1,13,8,WDWWLDDDW,2,2,1,7,7,3,17,5,2,2,17,9,DWDLWWLWW,3,0,1,8,5,WWLDD,WLWW
+Braunschweig,FC St. Pauli,2-1,/match/eintracht-brau-hellip/st-pauli/2021,2021,10,2_liga,18,23,0,2,1,16,8,2,2,5,9,21,LDLWLWDLL,2,1,1,6,6,17,7,1,4,4,12,17,DWLDDDLLL,0,3,2,6,9,DWWL,DLDDL
+Greuther Fürth,Heidenheim,0-1,/match/greuther-furth/heidenheim/2021,2021,10,2_liga,18,23,2,0,1,1,18,5,3,1,19,10,DDDLWWWWW,2,1,1,8,4,10,12,3,3,3,15,13,WLDLDLWDW,0,1,3,5,9,DLWW,LLLD
+Hamburger SV,Hannover 96,0-1,/match/hamburger-sv/hannover-96/2021,2021,10,2_liga,18,23,2,0,1,2,17,5,2,2,19,14,WWWWWDDLL,3,1,1,11,7,14,10,3,1,5,12,13,WLWLWLDLL,0,0,4,3,9,WWWDL,LLLL
+VfL Osnabrück,Karlsruher SC,1-2,/match/vfl-osnabruck/karlsruher-sc/2021,2021,10,2_liga,18,23,2,1,2,4,16,4,4,1,13,11,DWDDDWWLW,2,1,1,6,7,8,13,4,1,4,14,10,LLLWDLWWW,2,1,2,7,5,WDWL,LLDWW
+Erzgebirge Aue,Jahn Regensburg,0-2,/match/fc-erzgebirge-aue/ssv-jahn-regensburg/2021,2021,10,2_liga,18,23,2,0,2,6,15,4,3,2,14,9,WDLWLDDWW,2,2,0,7,3,9,12,3,3,3,13,14,DDWDWLLLW,0,2,2,4,8,DWDW,DDLL
+Paderborn,Nürnberg,0-2,/match/paderborn/fc-nurnberg/2021,2021,10,2_liga,18,23,2,0,2,7,14,4,2,3,14,8,LLDWDWWWL,3,0,1,9,5,13,10,2,4,3,16,15,DWLDDLDWL,1,2,1,9,7,LWWW,DDLW
+Würzburger,Sandhausen,2-3,/match/wurzburger-kickers/sv-sandhausen/2021,2021,10,2_liga,18,23,2,2,3,18,4,1,1,7,9,21,LLDLLLLWL,1,1,3,6,11,15,8,2,2,5,9,16,WLWLDLDLL,0,0,4,1,7,LDLLW,LLLL
+VfL Bochum,Paderborn,3-0,/match/bochum/paderborn/2021,2021,11,2_liga,18,23,0,3,0,3,17,5,2,3,18,12,DWDLWWLWWL,2,2,1,9,4,10,14,4,2,4,14,10,LLDWDWWWLL,1,2,2,5,3,DDWLW,LDDWL
+Sandhausen,Greuther Fürth,0-3,/match/sv-sandhausen/greuther-furth/2021,2021,11,2_liga,18,23,2,0,3,15,11,3,2,5,12,18,WLWLDLDLLW,2,2,1,8,9,2,18,5,3,2,19,11,DDDLWWWWWL,3,2,0,11,6,WWDDL,DDWWW
+Darmstadt 98,Hamburger SV,1-2,/match/darmstadt-98/hamburger-sv/2021,2021,11,2_liga,18,23,2,1,2,14,12,3,3,4,18,21,LDWDDWLLWL,1,2,1,6,6,4,17,5,2,3,19,15,WWWWWDDLLL,2,1,1,8,7,DDLW,WWDL
+Heidenheim,Hannover 96,1-0,/match/heidenheim/hannover-96/2021,2021,11,2_liga,18,23,0,1,0,8,15,4,3,3,16,13,WLDLDLWDWW,3,2,0,10,4,13,13,4,1,5,13,13,WLWLWLDLLW,1,0,4,4,9,WDDWW,LLLLW
+Jahn Regensburg,Holstein Kiel,2-3,/match/ssv-jahn-regensburg/holstein-kiel/2021,2021,11,2_liga,18,23,2,2,3,7,15,4,3,3,15,14,DDWDWLLLWW,3,1,1,9,6,1,19,5,4,1,16,9,WDWWLDDDWW,2,2,0,6,1,DWWLW,DWDW
+Braunschweig,VfL Osnabrück,0-2,/match/eintracht-brau-hellip/vfl-osnabruck/2021,2021,11,2_liga,18,23,2,0,2,16,11,3,2,5,11,22,LDLWLWDLLW,3,1,1,8,7,6,16,4,4,2,14,13,DWDDDWWLWL,2,3,0,7,4,DWWLW,DDDWW
+Karlsruher SC,Fortuna,1-2,/match/karlsruher-sc/fortuna-dusseldorf/2021,2021,11,2_liga,18,23,2,1,2,5,16,5,1,4,16,11,LLLWDLWWWW,2,0,2,7,5,11,14,4,2,4,11,17,LWLDLWDWLW,0,1,4,3,13,LWLW,LLLDL
+Nürnberg,Würzburger,2-1,/match/fc-nurnberg/wurzburger-kickers/2021,2021,11,2_liga,18,23,0,2,1,12,13,3,4,3,18,15,DWLDDLDWLW,1,2,2,7,8,18,4,1,1,8,11,24,LLDLLLLWLL,0,0,4,3,10,WLDDL,LLLL
+FC St. Pauli,Erzgebirge Aue,2-2,/match/st-pauli/fc-erzgebirge-aue/2021,2021,11,2_liga,18,23,1,2,2,17,7,1,4,5,13,19,DWLDDDLLLL,1,1,2,6,8,9,15,4,3,3,14,11,WDLWLDDWWL,2,1,2,7,6,WDLL,WLLDW
+Greuther Fürth,Darmstadt 98,0-4,/match/greuther-furth/darmstadt-98/2021,2021,12,2_liga,18,23,2,0,4,2,21,6,3,2,22,11,DDDLWWWWWLW,2,1,2,8,5,14,12,3,3,5,19,23,LDWDDWLLWLL,2,1,3,12,15,DLWWL,LWDWLL
+Hamburger SV,Sandhausen,4-0,/match/hamburger-sv/sv-sandhausen/2021,2021,12,2_liga,18,23,0,4,0,4,20,6,2,3,21,16,WWWWWDDLLLW,3,1,2,11,8,15,11,3,2,6,12,21,WLWLDLDLLWL,1,0,4,4,9,WWWDLL,LLLLW
+Hannover 96,VfL Bochum,2-0,/match/hannover-96/bochum/2021,2021,12,2_liga,18,23,0,2,0,13,13,4,1,6,13,14,WLWLWLDLLWL,3,1,1,9,4,3,20,6,2,3,21,12,DWDLWWLWWLW,3,0,2,9,8,WWWDL,WLWWL
+Heidenheim,Jahn Regensburg,0-0,/match/heidenheim/ssv-jahn-regensburg/2021,2021,12,2_liga,18,23,1,0,0,6,18,5,3,3,17,13,WLDLDLWDWWW,4,2,0,11,4,11,15,4,3,4,17,17,DDWDWLLLWWL,1,2,2,6,8,WDDWWW,DDLLW
+Fortuna,VfL Osnabrück,3-0,/match/fortuna-dusseldorf/vfl-osnabruck/2021,2021,12,2_liga,18,23,0,3,0,7,17,5,2,4,13,18,LWLDLWDWLWW,4,1,0,8,4,5,19,5,4,2,16,13,DWDDDWWLWLW,3,3,0,9,4,WDWWW,DDDWWW
+Holstein Kiel,Nürnberg,1-0,/match/holstein-kiel/fc-nurnberg/2021,2021,12,2_liga,18,23,0,1,0,1,22,6,4,1,19,11,WDWWLDDDWWW,3,2,1,10,8,8,16,4,4,3,20,16,DWLDDLDWLWW,2,2,1,11,7,WWLDDW,DDLWW
+Paderborn,Braunschweig,2-2,/match/paderborn/eintracht-brau-hellip/2021,2021,12,2_liga,18,23,1,2,2,12,14,4,2,5,14,13,LLDWDWWWLLL,3,0,2,9,7,16,11,3,2,6,11,24,LDLWLWDLLWL,0,1,4,3,15,LWWWL,LLLDL
+Erzgebirge Aue,Karlsruher SC,4-1,/match/fc-erzgebirge-aue/karlsruher-sc/2021,2021,12,2_liga,18,23,0,4,1,10,16,4,4,3,16,13,WDLWLDDWWLD,2,2,1,7,5,9,16,5,1,5,17,13,LLLWDLWWWWL,3,1,2,9,6,DWDWL,LLDWWW
+Würzburger,FC St. Pauli,1-1,/match/wurzburger-kickers/st-pauli/2021,2021,12,2_liga,18,23,1,1,1,18,4,1,1,9,12,26,LLDLLLLWLLL,1,1,4,8,14,17,8,1,5,5,15,21,DWLDDDLLLLD,0,3,3,7,11,LDLLWL,DLDDLL
+VfL Bochum,Heidenheim,3-0,/match/bochum/heidenheim/2021,2021,13,2_liga,18,23,0,3,0,5,20,6,2,4,21,14,DWDLWWLWWLWL,3,2,1,12,4,7,19,5,4,3,17,13,WLDLDLWDWWWD,1,1,3,6,9,DDWLWW,LLLDW
+Jahn Regensburg,Hannover 96,0-0,/match/ssv-jahn-regensburg/hannover-96/2021,2021,13,2_liga,18,23,1,0,0,11,16,4,4,4,17,17,DDWDWLLLWWLD,3,1,2,11,9,12,16,5,1,6,15,14,WLWLWLDLLWLW,1,0,5,4,10,DWWLWL,LLLLWL
+Braunschweig,Greuther Fürth,0-3,/match/eintracht-brau-hellip/greuther-furth/2021,2021,13,2_liga,18,23,2,0,3,15,12,3,3,6,13,26,LDLWLWDLLWLD,3,1,2,8,9,3,21,6,3,3,22,15,DDDLWWWWWLWL,4,2,0,14,6,DWWLWL,DDWWWW
+Darmstadt 98,Würzburger,2-0,/match/darmstadt-98/wurzburger-kickers/2021,2021,13,2_liga,18,23,0,2,0,14,15,4,3,5,23,23,LDWDDWLLWLLW,1,2,2,7,8,18,5,1,2,9,13,27,LLDLLLLWLLLD,0,0,5,4,12,DDLWL,LLLLL
+VfL Osnabrück,Paderborn,0-1,/match/vfl-osnabruck/paderborn/2021,2021,13,2_liga,18,23,2,0,1,8,19,5,4,3,16,16,DWDDDWWLWLWL,2,1,2,7,9,13,15,4,3,5,16,15,LLDWDWWWLLLD,1,2,3,5,6,WDWLL,LDDWLL
+Nürnberg,Erzgebirge Aue,1-0,/match/fc-nurnberg/fc-erzgebirge-aue/2021,2021,13,2_liga,18,23,0,1,0,9,16,4,4,4,20,17,DWLDDLDWLWWL,2,2,2,9,9,6,19,5,4,3,20,14,WDLWLDDWWLDW,2,2,2,9,8,WLDDLW,WLLDWD
+Sandhausen,Holstein Kiel,0-2,/match/sv-sandhausen/holstein-kiel/2021,2021,13,2_liga,18,23,2,0,2,16,11,3,2,7,12,25,WLWLDLDLLWLL,2,2,2,8,12,1,25,7,4,1,20,11,WDWWLDDDWWWW,3,2,0,9,3,WWDDLL,DWDWW
+FC St. Pauli,Fortuna,0-3,/match/st-pauli/fortuna-dusseldorf/2021,2021,13,2_liga,18,23,2,0,3,17,9,1,6,5,16,22,DWLDDDLLLLDD,1,2,2,8,10,4,20,6,2,4,16,18,LWLDLWDWLWWW,1,1,4,5,14,WDLLD,LLLDLW
+Karlsruher SC,Hamburger SV,1-2,/match/karlsruher-sc/hamburger-sv/2021,2021,13,2_liga,18,23,2,1,2,10,16,5,1,6,18,17,LLLWDLWWWWLL,2,0,3,8,7,2,23,7,2,3,25,16,WWWWWDDLLLWW,3,1,1,10,8,LWLWL,WWDLW
+VfL Bochum,Darmstadt 98,2-1,/match/bochum/darmstadt-98/2021,2021,14,2_liga,18,23,0,2,1,5,23,7,2,4,24,14,DWDLWWLWWLWLW,4,2,1,15,4,10,18,5,3,5,25,23,LDWDDWLLWLLWW,3,1,3,16,15,DDWLWWW,LWDWLLW
+Heidenheim,Nürnberg,2-0,/match/heidenheim/fc-nurnberg/2021,2021,14,2_liga,18,23,0,2,0,7,19,5,4,4,17,16,WLDLDLWDWWWDL,4,3,0,11,4,9,19,5,4,4,21,17,DWLDDLDWLWWLW,2,2,2,11,8,WDDWWWD,DDLWWL
+Würzburger,Karlsruher SC,2-4,/match/wurzburger-kickers/karlsruher-sc/2021,2021,14,2_liga,18,23,2,2,4,18,5,1,2,10,13,29,LLDLLLLWLLLDL,1,2,4,9,15,14,16,5,1,7,19,19,LLLWDLWWWWLLL,3,1,3,10,10,LDLLWLD,LLDWWWL
+Erzgebirge Aue,Braunschweig,3-1,/match/fc-erzgebirge-aue/eintracht-brau-hellip/2021,2021,14,2_liga,18,23,0,3,1,6,19,5,4,4,20,15,WDLWLDDWWLDWL,3,2,1,11,6,15,12,3,3,7,13,29,LDLWLWDLLWLDL,0,2,4,5,17,DWDWLW,LLLDLD
+Greuther Fürth,FC St. Pauli,2-1,/match/greuther-furth/st-pauli/2021,2021,14,2_liga,18,23,0,2,1,3,24,7,3,3,25,15,DDDLWWWWWLWLW,2,1,3,8,9,17,9,1,6,6,16,25,DWLDDDLLLLDDL,0,4,3,8,12,DLWWLL,DLDDLLD
+Hamburger SV,Jahn Regensburg,3-1,/match/hamburger-sv/ssv-jahn-regensburg/2021,2021,14,2_liga,18,23,0,3,1,2,26,8,2,3,27,17,WWWWWDDLLLWWW,4,1,2,15,8,12,17,4,5,4,17,17,DDWDWLLLWWLDD,1,3,2,6,8,WWWDLLW,DDLLWD
+Hannover 96,Sandhausen,4-0,/match/hannover-96/sv-sandhausen/2021,2021,14,2_liga,18,23,0,4,0,13,17,5,2,6,15,14,WLWLWLDLLWLWD,4,1,1,11,4,16,11,3,2,8,12,27,WLWLDLDLLWLLL,1,0,5,4,13,WWWDLW,LLLLWL
+Holstein Kiel,VfL Osnabrück,1-2,/match/holstein-kiel/vfl-osnabruck/2021,2021,14,2_liga,18,23,2,1,2,1,28,8,4,1,22,11,WDWWLDDDWWWWW,4,2,1,11,8,8,19,5,4,4,16,17,DWDDDWWLWLWLL,3,3,1,9,7,WWLDDWW,DDDWWWL
+Fortuna,Paderborn,2-1,/match/fortuna-dusseldorf/paderborn/2021,2021,14,2_liga,18,23,0,2,1,4,23,7,2,4,19,18,LWLDLWDWLWWWW,5,1,0,11,4,11,18,5,3,5,17,15,LLDWDWWWLLLDW,2,2,3,6,6,WDWWWW,LDDWLLW
+Karlsruher SC,Greuther Fürth,3-2,/match/karlsruher-sc/greuther-furth/2021,2021,15,2_liga,18,23,0,3,2,11,19,6,1,7,23,21,LLLWDLWWWWLLLW,2,0,4,9,9,3,27,8,3,3,27,16,DDDLWWWWWLWLWW,5,2,0,17,6,LWLWLL,DDWWWWW
+Sandhausen,Heidenheim,4-0,/match/sv-sandhausen/heidenheim/2021,2021,15,2_liga,18,23,0,4,0,16,11,3,2,9,12,31,WLWLDLDLLWLLLL,2,2,3,8,14,7,22,6,4,4,19,16,WLDLDLWDWWWDLW,1,1,4,6,12,WWDDLLL,LLLDWL
+Nürnberg,Hamburger SV,1-1,/match/fc-nurnberg/hamburger-sv/2021,2021,15,2_liga,18,23,1,1,1,10,19,5,4,5,21,19,DWLDDLDWLWWLWL,3,2,2,10,9,1,29,9,2,3,30,18,WWWWWDDLLLWWWW,4,1,1,12,9,WLDDLWW,WWDLWW
+FC St. Pauli,Holstein Kiel,1-1,/match/st-pauli/holstein-kiel/2021,2021,15,2_liga,18,23,1,1,1,17,9,1,6,7,17,27,DWLDDDLLLLDDLL,1,2,3,8,13,2,28,8,4,2,23,13,WDWWLDDDWWWWWL,4,2,0,11,3,WDLLDL,DWDWWW
+VfL Osnabrück,Würzburger,2-3,/match/vfl-osnabruck/wurzburger-kickers/2021,2021,15,2_liga,18,23,2,2,3,8,22,6,4,4,18,18,DWDDDWWLWLWLLW,2,1,3,7,10,18,5,1,2,11,15,33,LLDLLLLWLLLDLL,0,0,6,4,14,WDWLLL,LLLLLL
+Darmstadt 98,Hannover 96,1-2,/match/darmstadt-98/hannover-96/2021,2021,15,2_liga,18,23,2,1,2,12,18,5,3,6,26,25,LDWDDWLLWLLWWL,2,2,2,9,8,9,20,6,2,6,19,14,WLWLWLDLLWLWDW,1,1,5,4,10,DDLWLW,LLLLWLD
+Paderborn,Erzgebirge Aue,2-1,/match/paderborn/fc-erzgebirge-aue/2021,2021,15,2_liga,18,23,0,2,1,13,18,5,3,6,18,17,LLDWDWWWLLLDWL,3,1,2,11,9,6,22,6,4,4,23,16,WDLWLDDWWLDWLW,2,2,3,9,9,LWWWLD,WLLDWDL
+Jahn Regensburg,VfL Bochum,0-2,/match/ssv-jahn-regensburg/bochum/2021,2021,15,2_liga,18,23,2,0,2,14,17,4,5,5,18,20,DDWDWLLLWWLDDL,3,2,2,11,9,5,26,8,2,4,26,15,DWDLWWLWWLWLWW,3,0,3,9,10,DWWLWLD,WLWWLL
+Braunschweig,Fortuna,0-0,/match/eintracht-brau-hellip/fortuna-dusseldorf/2021,2021,15,2_liga,18,23,1,0,0,15,12,3,3,8,14,32,LDLWLWDLLWLDLL,3,1,3,8,12,4,26,8,2,4,21,19,LWLDLWDWLWWWWW,2,1,4,8,14,DWWLWLL,LLLDLWW
+Greuther Fürth,Paderborn,1-1,/match/greuther-furth/paderborn/2021,2021,16,2_liga,18,23,1,1,1,4,27,8,3,4,29,19,DDDLWWWWWLWLWWL,3,1,3,10,10,11,21,6,3,6,20,18,LLDWDWWWLLLDWLW,2,2,4,7,8,DLWWLLW,LDDWLLWL
+Würzburger,Braunschweig,0-0,/match/wurzburger-kickers/eintracht-brau-hellip/2021,2021,16,2_liga,18,23,1,0,0,18,8,2,2,11,18,35,LLDLLLLWLLLDLLW,1,2,5,11,19,16,13,3,4,8,14,32,LDLWLWDLLWLDLLD,0,2,5,6,20,LDLLWLDL,LLLDLDL
+Erzgebirge Aue,Fortuna,0-3,/match/fc-erzgebirge-aue/fortuna-dusseldorf/2021,2021,16,2_liga,18,23,2,0,3,7,22,6,4,5,24,18,WDLWLDDWWLDWLWL,4,2,1,14,7,5,27,8,3,4,21,19,LWLDLWDWLWWWWWD,2,2,4,8,14,DWDWLWW,LLLDLWWD
+VfL Bochum,Nürnberg,3-1,/match/bochum/fc-nurnberg/2021,2021,16,2_liga,18,23,0,3,1,2,29,9,2,4,28,15,DWDLWWLWWLWLWWW,5,2,1,17,5,12,20,5,5,5,22,20,DWLDDLDWLWWLWLD,2,2,3,11,10,DDWLWWWW,DDLWWLL
+Hannover 96,FC St. Pauli,2-3,/match/hannover-96/st-pauli/2021,2021,16,2_liga,18,23,2,2,3,6,23,7,2,6,21,15,WLWLWLDLLWLWDWW,5,1,1,15,4,17,10,1,7,7,18,28,DWLDDDLLLLDDLLD,0,4,4,9,14,WWWDLWW,DLDDLLDL
+Heidenheim,Darmstadt 98,3-0,/match/heidenheim/darmstadt-98/2021,2021,16,2_liga,18,23,0,3,0,8,22,6,4,5,19,20,WLDLDLWDWWWDLWL,5,3,0,13,4,13,18,5,3,7,27,27,LDWDDWLLWLLWWLL,3,1,4,17,17,WDDWWWDW,LWDWLLWL
+Holstein Kiel,Karlsruher SC,2-3,/match/holstein-kiel/karlsruher-sc/2021,2021,16,2_liga,18,23,2,2,3,3,29,8,5,2,24,14,WDWWLDDDWWWWWLD,4,2,2,12,10,10,22,7,1,7,26,23,LLLWDLWWWWLLLWW,4,1,3,14,12,WWLDDWWL,LLDWWWLW
+Jahn Regensburg,Sandhausen,3-1,/match/ssv-jahn-regensburg/sv-sandhausen/2021,2021,16,2_liga,18,23,0,3,1,14,17,4,5,6,18,22,DDWDWLLLWWLDDLL,3,2,3,11,11,15,14,4,2,9,16,31,WLWLDLDLLWLLLLW,1,0,6,4,17,DWWLWLDL,LLLLWLL
+Hamburger SV,VfL Osnabrück,5-0,/match/hamburger-sv/vfl-osnabruck/2021,2021,16,2_liga,18,23,0,5,0,1,30,9,3,3,31,19,WWWWWDDLLLWWWWD,5,1,2,18,9,9,22,6,4,5,20,21,DWDDDWWLWLWLLWL,4,3,1,11,8,WWWDLLWW,DDDWWWLW
+Fortuna,Greuther Fürth,3-3,/match/fortuna-dusseldorf/greuther-furth/2021,2021,17,2_liga,18,23,1,3,3,3,30,9,3,4,24,19,LWLDLWDWLWWWWWDW,6,1,0,13,5,5,28,8,4,4,30,20,DDDLWWWWWLWLWWLD,5,2,1,19,9,WDWWWWW,DDWWWWWL
+VfL Osnabrück,Erzgebirge Aue,0-1,/match/vfl-osnabruck/fc-erzgebirge-aue/2021,2021,17,2_liga,18,23,2,0,1,10,22,6,4,6,20,26,DWDDDWWLWLWLLWLL,2,1,4,9,13,9,22,6,4,6,24,21,WDLWLDDWWLDWLWLL,2,2,4,10,11,WDWLLLL,WLLDWDLL
+Braunschweig,Hamburger SV,2-4,/match/eintracht-brau-hellip/hamburger-sv/2021,2021,17,2_liga,18,23,2,2,4,16,14,3,5,8,14,32,LDLWLWDLLWLDLLDD,3,2,3,8,12,1,33,10,3,3,36,19,WWWWWDDLLLWWWWDW,4,2,1,13,10,DWWLWLLD,WWDLWWD
+Karlsruher SC,Heidenheim,1-1,/match/karlsruher-sc/heidenheim/2021,2021,17,2_liga,18,23,1,1,1,7,25,8,1,7,29,25,LLLWDLWWWWLLLWWW,3,0,4,12,11,6,25,7,4,5,22,20,WLDLDLWDWWWDLWLW,1,1,5,6,16,LWLWLLW,LLLDWLL
+Paderborn,Würzburger,1-0,/match/paderborn/wurzburger-kickers/2021,2021,17,2_liga,18,23,0,1,0,11,22,6,4,6,21,19,LLDWDWWWLLLDWLWD,4,1,2,13,10,18,9,2,3,11,18,35,LLDLLLLWLLLDLLWD,1,0,6,7,16,LWWWLDW,LLLLLLW
+Darmstadt 98,Holstein Kiel,0-2,/match/darmstadt-98/holstein-kiel/2021,2021,17,2_liga,18,23,2,0,2,14,18,5,3,8,27,30,LDWDDWLLWLLWWLLL,2,2,3,10,10,4,29,8,5,3,26,17,WDWWLDDDWWWWWLDL,4,3,0,12,4,DDLWLWL,DWDWWWD
+Nürnberg,Hannover 96,2-5,/match/fc-nurnberg/hannover-96/2021,2021,17,2_liga,18,23,2,2,5,12,20,5,5,6,23,23,DWLDDLDWLWWLWLDL,3,3,2,11,10,8,23,7,2,7,23,18,WLWLWLDLLWLWDWWL,2,1,5,6,11,WLDDLWWD,LLLLWLDW
+Sandhausen,VfL Bochum,1-1,/match/sv-sandhausen/bochum/2021,2021,17,2_liga,18,23,1,1,1,15,14,4,2,10,17,34,WLWLDLDLLWLLLLWL,3,2,3,12,14,2,32,10,2,4,31,16,DWDLWWLWWLWLWWWW,4,0,3,11,10,WWDDLLLW,WLWWLLW
+FC St. Pauli,Jahn Regensburg,2-0,/match/st-pauli/ssv-jahn-regensburg/2021,2021,17,2_liga,18,23,0,2,0,17,13,2,7,7,21,30,DWLDDDLLLLDDLLDW,1,3,3,9,14,13,20,5,5,6,21,23,DDWDWLLLWWLDDLLW,1,3,3,7,11,WDLLDLD,DDLLWDL
+Erzgebirge Aue,Würzburger,2-1,/match/fc-erzgebirge-aue/wurzburger-kickers/2021,2021,18,2_liga,18,23,0,2,1,10,25,7,4,6,25,21,WDLWLDDWWLDWLWLLW,4,2,2,14,10,18,9,2,3,12,18,36,LLDLLLLWLLLDLLWDL,1,0,7,7,17,DWDWLWWL,LLLLLLWL
+Braunschweig,Heidenheim,1-0,/match/eintracht-brau-hellip/heidenheim/2021,2021,18,2_liga,18,23,0,1,0,17,14,3,5,9,16,36,LDLWLWDLLWLDLLDDL,3,2,4,10,16,6,26,7,5,5,23,21,WLDLDLWDWWWDLWLWD,1,2,5,7,17,DWWLWLLDL,LLLDWLLD
+Fortuna,Hamburger SV,0-0,/match/fortuna-dusseldorf/hamburger-sv/2021,2021,18,2_liga,18,23,1,0,0,4,31,9,4,4,27,22,LWLDLWDWLWWWWWDWD,6,2,0,16,8,1,36,11,3,3,40,21,WWWWWDDLLLWWWWDWW,5,2,1,17,12,WDWWWWWD,WWDLWWDW
+VfL Osnabrück,Greuther Fürth,0-1,/match/vfl-osnabruck/greuther-furth/2021,2021,18,2_liga,18,23,2,0,1,11,22,6,4,7,20,27,DWDDDWWLWLWLLWLLL,2,1,5,9,14,5,29,8,5,4,33,23,DDDLWWWWWLWLWWLDD,5,3,1,22,12,WDWLLLLL,DDWWWWWLD
+Darmstadt 98,Sandhausen,2-1,/match/darmstadt-98/sv-sandhausen/2021,2021,18,2_liga,18,23,0,2,1,14,18,5,3,9,27,32,LDWDDWLLWLLWWLLLL,2,2,4,10,12,16,15,4,3,10,18,35,WLWLDLDLLWLLLLWLD,1,0,7,5,20,DDLWLWLL,LLLLWLLL
+Karlsruher SC,Hannover 96,1-0,/match/karlsruher-sc/hannover-96/2021,2021,18,2_liga,18,23,0,1,0,7,26,8,2,7,30,26,LLLWDLWWWWLLLWWWD,3,1,4,13,12,8,26,8,2,7,28,20,WLWLWLDLLWLWDWWLW,3,1,5,11,13,LWLWLLWD,LLLLWLDWW
+Nürnberg,Jahn Regensburg,0-1,/match/fc-nurnberg/ssv-jahn-regensburg/2021,2021,18,2_liga,18,23,2,0,1,12,20,5,5,7,25,28,DWLDDLDWLWWLWLDLL,3,3,3,13,15,13,20,5,5,7,21,25,DDWDWLLLWWLDDLLWL,1,3,4,7,13,WLDDLWWDL,DDLLWDLL
+Paderborn,Holstein Kiel,1-1,/match/paderborn/holstein-kiel/2021,2021,18,2_liga,18,23,1,1,1,9,25,7,4,6,22,19,LLDWDWWWLLLDWLWDW,5,1,2,14,10,3,32,9,5,3,28,17,WDWWLDDDWWWWWLDLW,5,3,0,14,4,LWWWLDWW,DWDWWWDW
+FC St. Pauli,VfL Bochum,2-3,/match/st-pauli/bochum/2021,2021,18,2_liga,18,23,2,2,3,15,16,3,7,7,23,30,DWLDDDLLLLDDLLDWW,2,3,3,11,14,2,33,10,3,4,32,17,DWDLWWLWWLWLWWWWD,4,1,3,12,11,WDLLDLDW,WLWWLLWD
+Greuther Fürth,Erzgebirge Aue,3-0,/match/greuther-furth/fc-erzgebirge-aue/2021,2021,19,2_liga,18,23,0,3,0,5,32,9,5,4,34,23,DDDLWWWWWLWLWWLDDW,3,2,3,11,11,7,28,8,4,6,27,22,WDLWLDDWWLDWLWLLWW,3,2,4,11,11,DLWWLLWD,WLLDWDLLW
+Würzburger,Fortuna,2-1,/match/wurzburger-kickers/fortuna-dusseldorf/2021,2021,19,2_liga,18,23,0,2,1,18,9,2,3,13,19,38,LLDLLLLWLLLDLLWDLL,1,3,5,11,19,4,32,9,5,4,27,22,LWLDLWDWLWWWWWDWDD,3,2,4,11,14,LDLLWLDLD,LLLDLWWDW
+Hamburger SV,Paderborn,3-1,/match/hamburger-sv/paderborn/2021,2021,19,2_liga,18,23,0,3,1,1,37,11,4,3,40,21,WWWWWDDLLLWWWWDWWD,6,1,2,23,9,9,26,7,5,6,23,20,LLDWDWWWLLLDWLWDWD,2,3,4,8,9,WWWDLLWWW,LDDWLLWLD
+Holstein Kiel,Braunschweig,3-1,/match/holstein-kiel/eintracht-brau-hellip/2021,2021,19,2_liga,18,23,0,3,1,3,33,9,6,3,29,18,WDWWLDDDWWWWWLDLWD,4,2,3,14,13,15,17,4,5,9,17,36,LDLWLWDLLWLDLLDDLW,0,3,5,6,20,WWLDDWWLL,LLLDLDLD
+Jahn Regensburg,Darmstadt 98,1-1,/match/ssv-jahn-regensburg/darmstadt-98/2021,2021,19,2_liga,18,23,1,1,1,11,23,6,5,7,22,25,DDWDWLLLWWLDDLLWLW,4,2,3,14,12,13,21,6,3,9,29,33,LDWDDWLLWLLWWLLLLW,3,1,5,17,20,DWWLWLDLW,LWDWLLWLL
+VfL Bochum,Karlsruher SC,1-2,/match/bochum/karlsruher-sc/2021,2021,19,2_liga,18,23,2,1,2,2,36,11,3,4,35,19,DWDLWWLWWLWLWWWWDW,6,2,1,20,6,6,29,9,2,7,31,26,LLLWDLWWWWLLLWWWDW,5,1,3,17,14,DDWLWWWWW,LLDWWWLWW
+Heidenheim,FC St. Pauli,3-4,/match/heidenheim/st-pauli/2021,2021,19,2_liga,18,23,2,3,4,10,26,7,5,6,23,22,WLDLDLWDWWWDLWLWDL,6,3,0,16,4,16,16,3,7,8,25,33,DWLDDDLLLLDDLLDWWL,1,4,4,12,16,WDDWWWDWW,DLDDLLDLW
+Sandhausen,Nürnberg,2-0,/match/sv-sandhausen/fc-nurnberg/2021,2021,19,2_liga,18,23,0,2,0,17,15,4,3,11,19,37,WLWLDLDLLWLLLLWLDL,3,3,3,13,15,14,20,5,5,8,25,29,DWLDDLDWLWWLWLDLLL,2,2,4,12,13,WWDDLLLWD,DDLWWLLL
+Hannover 96,VfL Osnabrück,1-0,/match/hannover-96/vfl-osnabruck/2021,2021,19,2_liga,18,23,0,1,0,8,26,8,2,8,28,21,WLWLWLDLLWLWDWWLWL,5,1,2,17,7,12,22,6,4,8,20,28,DWDDDWWLWLWLLWLLLL,4,3,2,11,13,WWWDLWWL,DDDWWWLWL
+Erzgebirge Aue,Hamburger SV,3-3,/match/fc-erzgebirge-aue/hamburger-sv/2021,2021,20,2_liga,18,23,1,3,3,8,28,8,4,7,27,25,WDLWLDDWWLDWLWLLWWL,5,2,2,16,11,1,40,12,4,3,43,22,WWWWWDDLLLWWWWDWWDW,5,3,1,17,12,DWDWLWWLW,WWDLWWDWD
+FC St. Pauli,Sandhausen,2-1,/match/st-pauli/sv-sandhausen/2021,2021,20,2_liga,18,23,0,2,1,15,19,4,7,8,29,36,DWLDDDLLLLDDLLDWWLW,2,3,4,13,17,16,18,5,3,11,21,37,WLWLDLDLLWLLLLWLDLW,1,0,8,6,22,WDLLDLDWL,LLLLWLLLL
+Braunschweig,Hannover 96,1-2,/match/eintracht-brau-hellip/hannover-96/2021,2021,20,2_liga,18,23,2,1,2,17,17,4,5,10,18,39,LDLWLWDLLWLDLLDDLWL,4,2,4,11,16,7,29,9,2,8,29,21,WLWLWLDLLWLWDWWLWLW,3,1,6,11,14,DWWLWLLDLW,LLLLWLDWWL
+Darmstadt 98,Nürnberg,1-2,/match/darmstadt-98/fc-nurnberg/2021,2021,20,2_liga,18,23,2,1,2,13,22,6,4,9,30,34,LDWDDWLLWLLWWLLLLWD,3,2,4,12,13,14,20,5,5,9,25,31,DWLDDLDWLWWLWLDLLLL,2,2,5,12,15,DDLWLWLLW,DDLWWLLLL
+VfL Osnabrück,VfL Bochum,1-2,/match/vfl-osnabruck/bochum/2021,2021,20,2_liga,18,23,2,1,2,12,22,6,4,9,20,29,DWDDDWWLWLWLLWLLLLL,2,1,6,9,15,2,36,11,3,5,36,21,DWDLWWLWWLWLWWWWDWL,5,1,3,15,13,WDWLLLLLL,WLWWLLWDW
+Greuther Fürth,Würzburger,4-1,/match/greuther-furth/wurzburger-kickers/2021,2021,20,2_liga,18,23,0,4,1,4,35,10,5,4,37,23,DDDLWWWWWLWLWWLDDWW,4,2,3,14,11,18,12,3,3,13,21,39,LLDLLLLWLLLDLLWDLLW,1,0,8,8,19,DLWWLLWDW,LLLLLLWLL
+Karlsruher SC,Jahn Regensburg,0-0,/match/karlsruher-sc/ssv-jahn-regensburg/2021,2021,20,2_liga,18,23,1,0,0,6,32,10,2,7,33,27,LLLWDLWWWWLLLWWWDWW,4,1,4,14,12,11,24,6,6,7,23,26,DDWDWLLLWWLDDLLWLWD,2,3,4,8,13,LWLWLLWDW,DDLLWDLLW
+Fortuna,Holstein Kiel,0-2,/match/fortuna-dusseldorf/holstein-kiel/2021,2021,20,2_liga,18,23,2,0,2,5,32,9,5,5,28,24,LWLDLWDWLWWWWWDWDDL,6,3,0,16,8,3,36,10,6,3,32,19,WDWWLDDDWWWWWLDLWDW,5,4,0,15,5,WDWWWWWDD,DWDWWWDWD
+Paderborn,Heidenheim,2-2,/match/paderborn/heidenheim/2021,2021,20,2_liga,18,23,1,2,2,10,26,7,5,7,24,23,LLDWDWWWLLLDWLWDWDL,5,2,2,15,11,9,26,7,5,7,26,26,WLDLDLWDWWWDLWLWDLL,1,2,6,7,18,LWWWLDWWD,LLLDWLLDL
+Hannover 96,Paderborn,0-0,/match/hannover-96/paderborn/2021,2021,21,2_liga,18,23,1,0,0,7,32,10,2,8,31,22,WLWLWLDLLWLWDWWLWLWW,6,1,2,18,7,9,27,7,6,7,26,25,LLDWDWWWLLLDWLWDWDLD,2,3,5,9,12,WWWDLWWLW,LDDWLLWLDL
+Holstein Kiel,Würzburger,1-0,/match/holstein-kiel/wurzburger-kickers/2021,2021,21,2_liga,18,23,0,1,0,3,39,11,6,3,34,19,WDWWLDDDWWWWWLDLWDWW,5,2,3,17,14,18,12,3,3,14,22,43,LLDLLLLWLLLDLLWDLLWL,1,0,9,9,23,WWLDDWWLLW,LLLLLLWLLL
+Hamburger SV,Greuther Fürth,0-0,/match/hamburger-sv/greuther-furth/2021,2021,21,2_liga,18,23,1,0,0,1,41,12,5,3,46,25,WWWWWDDLLLWWWWDWWDWD,7,1,2,26,10,4,38,11,5,4,41,24,DDDLWWWWWLWLWWLDDWWW,6,3,1,23,12,WWWDLLWWWW,DDWWWWWLDW
+Heidenheim,Erzgebirge Aue,2-0,/match/heidenheim/fc-erzgebirge-aue/2021,2021,21,2_liga,18,23,0,2,0,10,27,7,6,7,28,28,WLDLDLWDWWWDLWLWDLLD,6,3,1,19,8,8,29,8,5,7,30,28,WDLWLDDWWLDWLWLLWWLD,3,2,5,11,14,WDDWWWDWWL,WLLDWDLLWL
+Jahn Regensburg,Fortuna,1-1,/match/ssv-jahn-regensburg/fortuna-dusseldorf/2021,2021,21,2_liga,18,23,1,1,1,11,25,6,7,7,23,26,DDWDWLLLWWLDDLLWLWDD,4,3,3,15,13,6,32,9,5,6,28,26,LWLDLWDWLWWWWWDWDDLL,3,2,5,12,16,DWWLWLDLWD,LLLDLWWDWL
+Sandhausen,Karlsruher SC,2-3,/match/sv-sandhausen/karlsruher-sc/2021,2021,21,2_liga,18,23,2,2,3,16,18,5,3,12,22,39,WLWLDLDLLWLLLLWLDLWL,4,3,3,15,15,5,33,10,3,7,33,27,LLLWDLWWWWLLLWWWDWWD,6,1,3,19,15,WWDDLLLWDW,LLDWWWLWWW
+VfL Bochum,Braunschweig,2-0,/match/bochum/eintracht-brau-hellip/2021,2021,21,2_liga,18,23,0,2,0,2,39,12,3,5,38,22,DWDLWWLWWLWLWWWWDWLW,6,2,2,21,8,17,17,4,5,11,19,41,LDLWLWDLLWLDLLDDLWLL,0,3,6,7,23,DDWLWWWWWL,LLLDLDLDL
+Darmstadt 98,VfL Osnabrück,1-0,/match/darmstadt-98/vfl-osnabruck/2021,2021,21,2_liga,18,23,0,1,0,14,22,6,4,10,31,36,LDWDDWLLWLLWWLLLLWDL,3,2,5,13,15,13,22,6,4,10,21,31,DWDDDWWLWLWLLWLLLLLL,4,3,3,11,14,DDLWLWLLWL,DDDWWWLWLL
+Nürnberg,FC St. Pauli,1-2,/match/fc-nurnberg/st-pauli/2021,2021,21,2_liga,18,23,2,1,2,12,23,6,5,9,27,32,DWLDDLDWLWWLWLDLLLLW,3,3,4,13,16,15,22,5,7,8,31,37,DWLDDDLLLLDDLLDWWLWW,2,4,4,16,19,WLDDLWWDLL,DLDDLLDLWW
+Erzgebirge Aue,VfL Bochum,1-0,/match/fc-erzgebirge-aue/bochum/2021,2021,22,2_liga,18,23,0,1,0,9,29,8,5,8,30,30,WDLWLDDWWLDWLWLLWWLDL,5,3,2,19,14,2,42,13,3,5,40,22,DWDLWWLWWLWLWWWWDWLWW,6,1,3,17,14,DWDWLWWLWD,WLWWLLWDWW
+Braunschweig,Jahn Regensburg,2-0,/match/eintracht-brau-hellip/ssv-jahn-regensburg/2021,2021,22,2_liga,18,23,0,2,0,17,17,4,5,12,19,43,LDLWLWDLLWLDLLDDLWLLL,4,2,5,12,18,11,26,6,8,7,24,27,DDWDWLLLWWLDDLLWLWDDD,2,4,4,8,13,DWWLWLLDLWL,DDLLWDLLWD
+Paderborn,Sandhausen,2-1,/match/paderborn/sv-sandhausen/2021,2021,22,2_liga,18,23,0,2,1,10,28,7,7,7,26,25,LLDWDWWWLLLDWLWDWDLDD,5,3,2,17,13,16,18,5,3,13,24,42,WLWLDLDLLWLLLLWLDLWLL,1,0,9,7,24,LWWWLDWWDD,LLLLWLLLLL
+FC St. Pauli,Darmstadt 98,3-2,/match/st-pauli/darmstadt-98/2021,2021,22,2_liga,18,23,0,3,2,13,25,6,7,8,33,38,DWLDDDLLLLDDLLDWWLWWW,3,3,4,15,18,12,25,7,4,10,32,36,LDWDDWLLWLLWWLLLLWDLW,3,2,5,18,21,WDLLDLDWLW,LWDWLLWLLD
+VfL Osnabrück,Heidenheim,1-2,/match/vfl-osnabruck/heidenheim/2021,2021,22,2_liga,18,23,2,1,2,15,22,6,4,11,21,32,DWDDDWWLWLWLLWLLLLLLL,2,1,7,10,17,8,30,8,6,7,30,28,WLDLDLWDWWWDLWLWDLLDW,1,3,6,9,20,WDWLLLLLLL,LLLDWLLDLD
+Fortuna,Hannover 96,3-2,/match/fortuna-dusseldorf/hannover-96/2021,2021,22,2_liga,18,23,0,3,2,6,33,9,6,6,29,27,LWLDLWDWLWWWWWDWDDLLD,6,3,1,16,10,7,33,10,3,8,31,22,WLWLWLDLLWLWDWWLWLWWD,4,1,6,13,15,WDWWWWWDDL,LLLLWLDWWLW
+Karlsruher SC,Nürnberg,0-1,/match/karlsruher-sc/fc-nurnberg/2021,2021,22,2_liga,18,23,2,0,1,5,36,11,3,7,36,29,LLLWDLWWWWLLLWWWDWWDW,4,2,4,14,12,14,23,6,5,10,28,34,DWLDDLDWLWWLWLDLLLLWL,3,2,5,14,16,LWLWLLWDWD,DDLWWLLLLW
+Würzburger,Hamburger SV,3-2,/match/wurzburger-kickers/hamburger-sv/2021,2021,22,2_liga,18,23,0,3,2,18,12,3,3,15,22,44,LLDLLLLWLLLDLLWDLLWLL,2,3,5,13,20,1,42,12,6,3,46,25,WWWWWDDLLLWWWWDWWDWDD,5,4,1,20,15,LDLLWLDLDW,WWDLWWDWDD
+Greuther Fürth,Holstein Kiel,2-1,/match/greuther-furth/holstein-kiel/2021,2021,22,2_liga,18,23,0,2,1,4,39,11,6,4,41,24,DDDLWWWWWLWLWWLDDWWWD,5,2,3,18,12,3,42,12,6,3,35,19,WDWWLDDDWWWWWLDLWDWWW,6,4,0,17,5,DLWWLLWDWW,DWDWWWDWDW
+Darmstadt 98,Karlsruher SC,0-1,/match/darmstadt-98/karlsruher-sc/2021,2021,23,2_liga,18,23,2,0,1,14,25,7,4,11,34,39,LDWDDWLLWLLWWLLLLWDLWL,4,2,5,14,15,5,36,11,3,8,36,30,LLLWDLWWWWLLLWWWDWWDWL,7,1,3,22,17,DDLWLWLLWLW,LLDWWWLWWWW
+Jahn Regensburg,Paderborn,1-0,/match/ssv-jahn-regensburg/paderborn/2021,2021,23,2_liga,18,23,0,1,0,12,26,6,8,8,24,29,DDWDWLLLWWLDDLLWLWDDDL,4,4,3,16,14,10,31,8,7,7,28,26,LLDWDWWWLLLDWLWDWDLDDW,2,4,5,9,12,DWWLWLDLWDD,LDDWLLWLDLD
+VfL Bochum,Würzburger,3-0,/match/bochum/wurzburger-kickers/2021,2021,23,2_liga,18,23,0,3,0,2,42,13,3,6,40,23,DWDLWWLWWLWLWWWWDWLWWL,7,2,2,23,8,18,15,4,3,15,25,46,LLDLLLLWLLLDLLWDLLWLLW,1,0,10,9,24,DDWLWWWWWLW,LLLLLLWLLLL
+Hannover 96,Greuther Fürth,2-2,/match/hannover-96/greuther-furth/2021,2021,23,2_liga,18,23,1,2,2,7,33,10,3,9,33,25,WLWLWLDLLWLWDWWLWLWWDL,6,2,2,18,7,4,42,12,6,4,43,25,DDDLWWWWWLWLWWLDDWWWDW,6,4,1,23,12,WWWDLWWLWD,DDWWWWWLDWD
+Holstein Kiel,Erzgebirge Aue,1-0,/match/holstein-kiel/fc-erzgebirge-aue/2021,2021,23,2_liga,18,23,0,1,0,3,42,12,6,4,36,21,WDWWLDDDWWWWWLDLWDWWWL,6,2,3,18,14,9,32,9,5,8,31,30,WDLWLDDWWLDWLWLLWWLDLW,3,2,6,11,16,WWLDDWWLLWW,WLLDWDLLWLL
+Heidenheim,Fortuna,3-2,/match/heidenheim/fortuna-dusseldorf/2021,2021,23,2_liga,18,23,0,3,2,8,33,9,6,7,32,29,WLDLDLWDWWWDLWLWDLLDWW,7,3,1,21,8,6,36,10,6,6,32,29,LWLDLWDWLWWWWWDWDDLLDW,3,3,5,13,17,WDDWWWDWWLW,LLLDLWWDWLD
+Nürnberg,Braunschweig,0-0,/match/fc-nurnberg/eintracht-brau-hellip/2021,2021,23,2_liga,18,23,1,0,0,13,26,7,5,10,29,34,DWLDDLDWLWWLWLDLLLLWLW,3,3,5,14,18,16,20,5,5,12,21,43,LDLWLWDLLWLDLLDDLWLLLW,0,3,7,7,25,WLDDLWWDLLL,LLLDLDLDLL
+Sandhausen,VfL Osnabrück,3-0,/match/sv-sandhausen/vfl-osnabruck/2021,2021,23,2_liga,18,23,0,3,0,17,18,5,3,14,25,44,WLWLDLDLLWLLLLWLDLWLLL,4,3,4,17,18,15,22,6,4,12,22,34,DWDDDWWLWLWLLWLLLLLLLL,4,3,4,11,15,WWDDLLLWDWL,DDDWWWLWLLL

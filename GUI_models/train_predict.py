@@ -171,15 +171,6 @@ def train_predict_check():
     button3 = tk.Button(root, text="Check",
                         command=lambda *args: OnButtonClick(3))
     button3.pack(fill=BOTH, expand=True)
-    # tk.Radiobutton(root, text="Train", indicatoron=0,
-    #                width=30, padx=20, variable=tr, value=1,
-    #                command=root.destroy).grid(row=2, column=0)
-    # tk.Radiobutton(root, text="Predict", indicatoron=0,
-    #                width=30, padx=20, variable=te, value=1,
-    #                command=root.destroy).grid(row=3, column=0)
-    # tk.Radiobutton(root, text="Check", indicatoron=0,
-    #                width=30, padx=20, variable=ch, value=1,
-    #                command=root.destroy).grid(row=4, column=0)
     root.mainloop()
     return button_ttc
 

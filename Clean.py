@@ -1,12 +1,86 @@
 import pandas as pd
 from Data.load_df import load_leagues
 import numpy as np
+import pickle
+
+
+def translate_streak(df_results, n_match=3):
+    '''
+    Creates new columns based on the streak of each team.
+    It creates n_match columns, where each column correponds
+    to the result of the team in the previous matches
+    Parameters
+    ----------
+    df_results : pandas Dataframe
+        Dataframe with the results of the matches
+    n_match: int
+        Number of matches to take into account from the streak
+    Returns
+    -------
+    df_results: pandas Dataframe
+        Dataframe with the results of the matches
+        with new columns for each team and its streak
+    '''
+    def get_nmatch(x):
+        if (x is np.nan) or (x == '0'):
+            string_streak = 'N' * n_match
+        elif len(x) >= n_match:
+            string_streak = x[-n_match:]
+        else:
+            string_streak = 'N' * (n_match - len(x)) + x
+
+        return string_streak
+
+    streak_columns = ['Total_Streak_Home', 'Total_Streak_Away',
+                      'Streak_When_Home', 'Streak_When_Away']
+    for streak in streak_columns:
+        new_cols = df_results[streak].map(get_nmatch)
+        for match in range(n_match):
+            col_name = streak + '-' + str(n_match - match)
+            match_col = new_cols.map(lambda x: x[match])
+            new_streaks = pd.get_dummies(match_col,
+                                         drop_first=True,
+                                         prefix=col_name)
+            df_results = pd.concat([df_results, new_streaks], axis=1)
+    return df_results
+
+
+def get_daytime(x):
+    '''
+    Returns an integer which represents
+    the time of the day the match took place
+    0: Morning
+    1: Afternoon
+    2: Evening
+    The function eventually will take the sunrise
+    and sunset time to change the outcome.
+    So far it assumes that the sunset is at 18:00 and the
+    sunrise is at 12:00
+
+    Parameters
+    ----------
+    x : str
+        The time of the match in 24h format (17:00)
+
+    Returns
+    -------
+    int
+        An integer representing the time of the day
+    '''
+    hour = int(x.split(':')[0])
+    if (hour >= 18) or (hour == 0):
+        return 2
+    if hour >= 12:
+        return 1
+    else:
+        return 0
 
 
 def get_hour(x):
     '''
     Takes the second part of the date column, which corresponds to the hour
     If not available, it returns a standard hour, 17:00
+
     Parameters
     ----------
     x: str
@@ -22,56 +96,77 @@ def get_hour(x):
         return '17:00'
 
 
-def create_mask(x):
+def standard_results(df_results):
     '''
-    Create a mask that divided cleans the result column
-    Only those values whose length is one or five characters long
-    can't be used
-    
+    Standarize the following features:
+        Position Home Team
+        Position Away Team
+        Goals For (Home, and Away)
+        Goals Away (Home, and Away)
+        Points_Home
+        Points_Away
+        Round
     Parameters
     ----------
-    x: str
-        The result of the match
+    df : pandas Dataframe
+        Dataframe with the info of the matches without normalizing
     Returns
     -------
-    bool
-        False if the length is 1 or 5. True otherwise
+    df_final : pandas Dataframe
+        Updated Dataframe with standarized features
     '''
-    if (len(x) == 1) | (len(x) == 5):
-        return False
-    else:
-        return True
+    list_position = ['Position_Home', 'Position_Away']
+    list_goals = ['Total_Goals_For_Home_Team', 'Total_Goals_Against_Home_Team',
+                  'Total_Goals_For_Away_Team', 'Total_Goals_Against_Away_Team',
+                  'Goals_For_When_Home', 'Goals_Against_When_Home',
+                  'Goals_For_When_Away', 'Goals_Against_When_Away']
+    list_points = ['Points_Home', 'Points_Away']
+    list_win_draw_lose = ['Total_Wins_Home', 'Total_Draw_Home',
+                          'Total_Lose_Home', 'Total_Wins_Away',
+                          'Total_Draw_Away', 'Total_Lose_Away',
+                          'Wins_When_Home', 'Draw_When_Home',
+                          'Lose_When_Home', 'Wins_When_Away',
+                          'Draw_When_Away', 'Lose_When_Away']
+
+    columns_to_encode = ['Daytime', 'Month']
+    df_results[list_position] = df_results[list_position].divide(
+                                            df_results['Number_Teams'], axis=0)
+    df_results[list_points] = df_results[list_points].divide(
+                                            df_results['Round'], axis=0)
+    df_results[list_win_draw_lose] = df_results[list_win_draw_lose].divide(
+                                            df_results['Round'], axis=0)
+    df_results[list_goals] = df_results[list_goals].divide(
+                                            df_results['Round'], axis=0)
+    df_results['Round'] = df_results['Round'].divide(
+                                            df_results['Total_Rounds'], axis=0)
+
+    return df_results
 
 
-def clean_data(res_dir, sta_dir):
+def clean_data(res_dir='Data/Results_Cleaned/*'):
     '''
     Loads the datasets of all the available leagues, concatenates them,
     en cleans the data
-    
+
     Parameters
     ----------
     res_dir: str
         Directory with the CSVs of the results
-    sta_dir: str
-        Directory with the CSVs of the standings
     Returns
     -------
     df_results: pandas DataFrame
         Dataframe with the result data of all the leagues
         concatenated and cleaned
-    df_standings: pandas DataFrame
-        Dataframe with the standing data of all the leagues
-        concatenated and cleaned
     '''
     df_results = load_leagues(res_dir)
-    df_standings = load_leagues(sta_dir)
-    df_match = pd.read_csv('./Data/Match_Info.csv')
+    filename = 'Data/Dictionaries/dict_match.pkl'
+    with open(filename, 'rb') as f:
+        dict_match = pickle.load(f)
     df_team = pd.read_csv('./Data/Team_Info.csv')
-
     # We start by cleaning the results dataframe. We also add some
     # features from the match dataframe
-    # TODO: The capacity column has many missing numbers. Once that is scraped
-    # finish it
+    df_team['Capacity'] = df_team['Capacity'].map(
+        lambda x: int(x.replace(',', '')))
 
     # Clean the pitch column by changing the strings for categories
     pitch_list = ['Natural', 'grass', 'Césped', 'cesped natural', 'Grass',
@@ -86,78 +181,63 @@ def clean_data(res_dir, sta_dir):
     df_team.loc[missing, 'Pitch'] = np.random.choice(
                     values_c.index, size=len(df_team[missing]),
                     p=values_c.values)
+    df_team['Pitch'] = df_team['Pitch'].astype('int')
 
     # Clean the date. The match dataframe has the right date so
     # we can merge them first, and substitute the data from the
     # match dataframe
+    df_results['Time'] = df_results['Link'].map(
+        dict_match).map(
+            lambda x: x[0]).map(
+                get_hour)
 
-    df_results = df_results.merge(df_match, on='Link')
-    df_results = df_results.drop_duplicates('Link', ignore_index=True)
-    df_results = df_results[['Home_Team', 'Away_Team',
-                             'Result', 'Year', 'Round',
-                             'League', 'Date_New', 'Link']]
-    df_results = df_results.rename(columns={'Date_New': 'Date',
-                                            'Year': 'Season'})
-    df_results['Time'] = df_results['Date'].map(get_hour)
-    df_results['Day'] = pd.to_datetime(
-                    df_results['Date'].map(
-                        lambda x: x.split(',')[1]
-                    ))
-    # Divide the results in two columns, and also obtain the label
+    # Then we can determine whether the match took place during
+    # the morning, afternoon or evening
+    df_results['Daytime'] = df_results['Time'].map(get_daytime)
 
-    mask = df_results['Result'].map(create_mask)
-    df_results = df_results[mask]
-    df_results['Home_Goals'] = df_results['Result'].map(
-                                            lambda x: x.split('-')[0])
-    df_results['Away_Goals'] = df_results['Result'].map(
-                                            lambda x: x.split('-')[1])
-    home_goals_list = ['(0)0', '(1)2', '(0)1', '(3)3',
-                       '0', '1', '2', '3', '4',
-                       '5', '6', '7', '8', '9',
-                       '10', '12', '01', '02',
-                       '03', '04', '05', '06', '07', '08']
-    home_goals_trans = ['0', '2', '1', '3', '0',
-                        '1', '2', '3', '4', '5',
-                        '6', '7', '8', '9', '10',
-                        '12', '1', '2', '3', '4',
-                        '5', '6', '7', '8']
-    home_goals_dict = dict(zip(home_goals_list, home_goals_trans))
+    # We can see the date to see if the mo
+    df_results['Date'] = pd.to_datetime(df_results['Link'].map(
+                dict_match).map(lambda x: x[0]).map(
+                        lambda x: x.split(',')[1]))
+    df_results['Weekend'] = df_results['Date'].dt.dayofweek.map(
+                        lambda x: 0 if x < 4 else 1)
+    df_results['Month'] = df_results['Date'].dt.month
+    df_results = df_results.merge(df_team, left_on='Home_Team',
+                                  right_on='Team')
 
-    away_goals_list = ['0(0)', '2(99)', '1(0)', '0(99)',
-                       'Jan', 'Apr', 'Feb', 'Mar',
-                       'May', 'Aug', 'Jul', 'Jun',
-                       '2(2)', '1(1)', '0', '1', '2',
-                       '3', '4', '5', '6', '7', '8', '9', '13']
-    away_goals_trans = ['0', '2', '1', '0', '1', '4',
-                        '2', '3', '5', '8', '7', '6',
-                        '2', '1', '0', '1', '2', '3',
-                        '4', '5', '6', '7', '8', '9', '13']
-    away_goals_dict = dict(zip(away_goals_list, away_goals_trans))
+    # We don't want the first round of each season, because there
+    # are no previous data for those matches
+    df_results = df_results[df_results['Round'] != 1]
 
-    df_results['Home_Goals'] = df_results['Home_Goals'].map(
-                                    home_goals_dict).astype('int')
-    df_results['Away_Goals'] = df_results['Away_Goals'].map(
-                                    away_goals_dict).astype('int')
-    df_results['Label'] = (
-        (df_results['Home_Goals'] < df_results['Away_Goals']) * 3
-        + (df_results['Home_Goals'] == df_results['Away_Goals']) * 2
-        + (df_results['Home_Goals'] > df_results['Away_Goals']) * 1) - 1
-    df_results = df_results.drop(['Result', 'Date'], axis=1)
-    df_standings.dropna(inplace=True)
-    # Cast the numeric values to int (instead of str)
-    df_standings[['Points', 'Goals_For', 'Goals_Against']] = df_standings[
-                            ['Points', 'Goals_For', 'Goals_Against']
-                            ].astype('int')
-    df_standings = df_standings.rename(columns={'Year': 'Season'})
-    return df_results, df_standings
+    # Let's get dummies for the month and the daytime columns
+    month_columns = pd.get_dummies(df_results['Month'],
+                                   prefix='Month',
+                                   drop_first=True)
+    df_results = pd.concat([df_results, month_columns], axis=1)
+    daytime_columns = pd.get_dummies(df_results['Daytime'],
+                                     prefix='Daytime',
+                                     drop_first=True)
+    df_results = pd.concat([df_results, daytime_columns], axis=1)
+    # We need to somehow translate the streaks of each team, so we create a
+    # set of dummies columns
+    df_results = translate_streak(df_results)
+    # Also, some numbers such as the current position, the number of points,
+    # or the current round can be standarize for each season
+    df_results = standard_results(df_results)
+    columns_to_drop = ['Home_Team', 'Away_Team', 'Result',
+                       'Link', 'Season', 'Goals_For_Home',
+                       'Goals_For_Away', 'League', 'Team',
+                       'City', 'Country', 'Stadium',
+                       'Total_Rounds', 'Number_Teams',
+                       'Total_Streak_Home', 'Total_Streak_Away',
+                       'Streak_When_Home', 'Streak_When_Away',
+                       'Month', 'Daytime', 'Date', 'Time']
+    df_results = df_results.drop(columns_to_drop, axis=1)
+    return df_results
 
 
 if __name__ == '__main__':
 
-    res_dir = './Data/Results'
-    sta_dir = './Data/Standings'
-
-    df_results, df_standings = clean_data(res_dir, sta_dir)
+    df_results = clean_data()
     # Export it as a csv for using in the Feature.py script
     df_results.to_csv('Results_Cleaned.csv', index=False)
-    df_standings.to_csv('Standings_Cleaned.csv', index=False)
