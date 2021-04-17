@@ -82,6 +82,9 @@ while running:
 
     # If action is 1, that means train has been pressed
     if action == 1:
+        # TODO Ask what years and leagues it wants 
+        # to train on
+        
         # Load the classification models
         classifiers = train_predict.train()
         clf_dict = {}
@@ -110,6 +113,10 @@ while running:
     elif action == 2:
         # Get information for the next round
         # Ask what league the user wants to predict from:
+        df_list = []
+        for data_file in sorted(glob.glob(f'{results_dir}/*/*')):
+            df_partial = pd.read_csv(data_file)
+            df_list.append(df_partial)
         next_match_list = train_predict.get_next_matches()
 
         # Ask what model the user wants to use for prediction:
