@@ -33,19 +33,19 @@ Before training, we need to split our data into training, testing, and validatio
 We need to check which classifier performs best with our data, so we train different models.<br>
 When running Main.py, or Main.ipynb, a window prompts, and we can choose which one we want to train with in a GUI as shown in the following picture:
 
-![Main GUI](/images/Main_GUI.png)
+![Main_GUI](https://user-images.githubusercontent.com/58112372/117522855-d4427a80-afb5-11eb-8a0b-d6d33f9014d7.png)
 
 Then, we can press train to select which models we want to use:
 
-![Train GUI](/images/Train_GUI.png)
+![Train_GUI](https://user-images.githubusercontent.com/58112372/117522839-bc6af680-afb5-11eb-8ffe-bc6578830d57.png)
 
 Once trained, the code will store the trained models in the Models folder. We can check the performance of these models pressing the Check button in the Main GUI:
 
-![Model Preformance GUI](/images/Check_Models_GUI.png)
+![Check_Models_GUI](https://user-images.githubusercontent.com/58112372/117522940-6185cf00-afb6-11eb-8fd3-1911a1b02fa9.png)
 
 We can also see these results graphically in the Main notebook
 
-![Model Preformance GUI](/images/Models_performances.png)
+![Models_performances](https://user-images.githubusercontent.com/58112372/117522949-6cd8fa80-afb6-11eb-9abe-74f567b80abe.png)
 
 It can be seen that the model with best performance is the Gradient Boost, so let's take a look at the metrics of this model
 
@@ -55,22 +55,21 @@ In the previous graph we can see that the accuracy of the gradient boost is arou
 
 We can see some other metrics of the Gradient Boost such as the confusion matrix:
 
-![Confusion Matrix](/images/Gradient_Boost_cm.png)
+![Gradient_Boost_cm](https://user-images.githubusercontent.com/58112372/117522955-76faf900-afb6-11eb-93d7-aeb100b71f9f.png)
 
 In the confusion matrix above, we can see that the model especially struggles to get the draws right. This might be changed if we tweak the threshold.<br>
 A good threshold can be calculated with the ROC curve
 
-![ROC curve](/images/Gradient_Boost_ROC.png)
+![Gradient_Boost_ROC](https://user-images.githubusercontent.com/58112372/117522958-7c584380-afb6-11eb-85be-e8d4d359afe4.png)
 
 Each point of the ROC curve is plotted with a different threshold, so we want to get a threshold that balances the TPR and the FPR, and this can be determined by optimizing the G-Mean `g-mean = sqrt(tpr * (1-fpr))`. That threshold corresponds to 0.253:
 
-![ROC curve with threshold](/images/Gradient_Boost_threshold.png)
+![Gradient_Boost_threshold](https://user-images.githubusercontent.com/58112372/117522963-85491500-afb6-11eb-837e-086b05a0b45e.png)
 
 Another thig to consider in the model is the feature importance, which defines how useful a feature is when classifying a sample<br>
 In the gradient boost model, we have the following feature importance array (plotted):
 
-
-![Feature Importance](/images/Gradient_Boost_features.png)
+![Gradient_Boost_features](https://user-images.githubusercontent.com/58112372/117522971-8b3ef600-afb6-11eb-934e-acece4023628.png)
 
 This means that the current position in the standing table of the home team and the away team are the most relevant features to classify the result of the match. On the other hand, whether it was played during the weekend or during the morning, afternoon or evening is not relevant for this classification.
 
@@ -79,7 +78,7 @@ This means that the current position in the standing table of the home team and 
 Finally, we have our model chosen, so we can use it for predicting the outcome of an upcoming match. <br>
 In the main GUI, the Predict button prompts the following window:
 
-![Leagues to predict from](/images/Predict_Leagues_GUI.png)
+![Predict_Leagues_GUI](https://user-images.githubusercontent.com/58112372/117522975-91cd6d80-afb6-11eb-849c-b1aa1ba34fe5.png)
 
 We can choose which league(s) we want our predictions from, and after choosing the league(s) and the model, the code will webscrape to look for the next match after the results we have. So, for example if out last data is from round 20, the code will check if there are remaining matches in round 20, if not, it will go to round 21. However, if round 21 is already played, that means our dataset is out of date, and we need to update it.<br>
 
@@ -87,11 +86,11 @@ _Note: if this happens, you can go to the Data Pipeline repo, run the update_dat
 
 After scraping for the next matches, this will be prompted
 
-![Matches to predict from](/images/Predict_Matches.png)
+![Predict_Matches](https://user-images.githubusercontent.com/58112372/117522990-a01b8980-afb6-11eb-8256-c89c5912bc93.png)
 
 The data is cleaned and transformed, and the model we chose (gradient boost in this case) will predict and show the outcome:
 
-![Predictions](/images/Predictions_GUI.png)
+![Predictions_GUI](https://user-images.githubusercontent.com/58112372/117522998-a7db2e00-afb6-11eb-9c66-dc6ee88a2c97.png)
 
 # Final notes
 
