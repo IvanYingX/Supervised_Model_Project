@@ -135,4 +135,4 @@ Results_Cleaned/
 Data
 Data_For_Model.csv
 Data_to_Predict.csv
-Models/
+Models/*.joblib
