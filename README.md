@@ -94,4 +94,4 @@ The data is cleaned and transformed, and the model we chose (gradient boost in t
 
 # Final notes
 
-I will try to update this repo until everythin is fully automated, in the meantime, there might be some bugs due to the lack of data. If that happens, just DM me and I will try to fix it ASAP
+I will try to update this repo until everythin is fully automated, in the meantime, there might be some bugs due to the lack of data. If that happens, just DM me and I will try to fix it ASAP.
