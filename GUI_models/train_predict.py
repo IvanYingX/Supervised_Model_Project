@@ -515,7 +515,7 @@ def get_next_matches():
         Dataframe with the name of each match in each league
     '''
     leagues = get_leagues()
-    df = load_df.load_leagues('Data/Results')
+    df = load_df.load_leagues('Data/Results_Cleaned')
     league_round_list = []
     matches = {}
     for league in leagues:
