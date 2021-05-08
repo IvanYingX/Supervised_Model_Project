@@ -2,20 +2,21 @@ import os
 import pandas as pd
 from Feature import *
 from GUI_models import train_predict
-from Models import *
-from Models import AdaBoost, Decision_Tree
-from Models import GradientBoost, KNN, Linear_Discriminant
-from Models import Logistic_reg, Naive_Bayes, SVC
-from Models import Random_Forest, SGD, Quadratic_Discriminant
 from joblib import load
+import tkinter as tk
+import pandas as pd
+from pandastable import Table
+from Models import *
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
-import tkinter as tk
-import pandas as pd
-from pandastable import Table
+from Transform.Feature import create_features
+from Models import AdaBoost, Decision_Tree
+from Models import GradientBoost, KNN, Linear_Discriminant
+from Models import Logistic_reg, Naive_Bayes, SVC
+from Models import Random_Forest, SGD, Quadratic_Discriminant
 
 
 class DataFrameTable(tk.Frame):
@@ -61,7 +62,7 @@ fun_dict = {
 }
 
 
-df = pd.read_csv('Data_For_Model.csv')
+df = pd.read_csv('Data/Data_For_Model.csv')
 X = df.iloc[:, 1::].values
 y = df.iloc[:, 0].values
 # Split the data into train and validation. The training set will be
